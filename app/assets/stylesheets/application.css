@@ -74,8 +74,10 @@
      float: left;
      overflow: hidden;
      max-height: 52px;
+     cursor: pointer;
      
  }
+
  #topbar nav ul li img {
      margin-left: 5px;
      margin-bottom: 3px;
@@ -124,6 +126,7 @@
      padding:20px;
      font-size:11pt;
      float:right;
+     cursor: pointer;
  }
  #rightbar nav ul li:hover {     
      

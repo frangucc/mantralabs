@@ -22,4 +22,21 @@
      top:0;
      width: 100%;
      box-shadow: 0 0 10px black;
+     color: #5e5e5e;
+ }
+ 
+ #topbar nav ul li {
+     display: inline-block;
+     line-height: 52px;
+     padding:0 20px 0 20px;
+     border-left: 1px solid #fff;
+     border-right: 1px solid #cbcacd;
+     margin: 0;
+     float: left;
+     overflow: hidden;
+     max-height: 52px;
+ }
+ #topbar nav ul li img {
+     margin-left: 5px;
+     margin-bottom: 3px;
  }

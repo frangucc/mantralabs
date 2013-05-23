@@ -137,7 +137,7 @@
  .m-limit-top {
      margin-top: 40px;
  }
- 
+
  .animation-color {
        transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
       -moz-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;    /* FF3.7+ */
@@ -157,3 +157,10 @@
       -o-transition: max-height 0.2s ease-in-out, width 0.2s ease-in-out;      /* Opera 10.5 */
       -webkit-transition: max-height 0.2s ease-in-out, width 0.2s ease-in-out; /* Saf3.2+, Chrome */    
 }
+
+
+ @media only screen and (max-width: 48em) {
+ .small-static {
+     position: static !important;
+ }
+ }

@@ -42,7 +42,7 @@
  
  
  body {
-     margin-top: 72px;
+     margin-top: 92px;
      font-family: 'cabinbold';
      font-size: 10pt;
      background: url(bgs/1.jpg) no-repeat top center;
@@ -62,6 +62,7 @@
      width: 100%;
      box-shadow: 0 0 10px black;
      color: #5e5e5e;
+     z-index: 2;
  }
  
  #topbar nav ul li {
@@ -74,6 +75,7 @@
      float: left;
      overflow: hidden;
      max-height: 52px;
+     
  }
  #topbar nav ul li img {
      margin-left: 5px;
@@ -108,4 +110,23 @@
  .oxygen {
  font-family: 'Oxygen', sans-serif;
  font-weight: 300;
+ }
+ 
+ #rightbar {
+     position: fixed;
+     right: 0;
+     top:250px;
+ }
+ 
+ #rightbar nav ul {
+     text-align: right;
+ }
+ #rightbar nav ul li {     
+     padding:20px;
+     font-size:11pt;
+     float:right;
+ }
+ 
+ .cboth {
+     clear: both;
  }

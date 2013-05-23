@@ -47,6 +47,10 @@
      font-size: 10pt;
  }
  
+ em {
+     font-family: 'cabinbold_italic';
+ }
+ 
  #topbar {
      background: url(topbar-bg.jpg) repeat-x top;
      position:fixed;
@@ -84,7 +88,14 @@
  h1 {
      font-size:48pt;
  }
- 
+ h2 {
+     font-size: 20pt;
+     line-height: 1.5em;
+ }
  .m-padding {
      padding: 44px 27px 44px 27px;
+ }
+ .oxygen {
+ font-family: 'Oxygen', sans-serif;
+ font-weight: 300;
  }

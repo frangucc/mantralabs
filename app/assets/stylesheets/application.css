@@ -69,8 +69,7 @@
      display: inline-block;
      line-height: 52px;
      padding:0 20px 0 20px;
-     border-left: 1px solid #fff;
-     border-right: 1px solid #cbcacd;
+     background: url(ui/topbar-limiter.png) repeat-y right;
      margin: 0;
      float: left;
      overflow: hidden;
@@ -88,7 +87,7 @@
  }
  .black-transparent-bg {
      background: #000;
-     background: rgba(0,0,0,0.8);
+     background: rgba(0,0,0,0.90);
      color: #fff;
  }
  .inline {
@@ -126,7 +125,35 @@
      font-size:11pt;
      float:right;
  }
+ #rightbar nav ul li:hover {     
+     
+     padding-right:25px;
+ }
  
  .cboth {
      clear: both;
  }
+ 
+ .m-limit-top {
+     margin-top: 40px;
+ }
+ 
+ .animation-color {
+       transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+      -moz-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;    /* FF3.7+ */
+      -o-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;      /* Opera 10.5 */
+      -webkit-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out; /* Saf3.2+, Chrome */ 
+}
+
+.position-animation {
+      transition: left 0.2s ease-in-out, top 0.2s ease-in-out, margin 0.2s ease-in-out, padding 0.2s ease-in-out;
+      -moz-transition: left 0.2s ease-in-out, top 0.2s ease-in-out, margin 0.2s ease-in-out, padding 0.2s ease-in-out;    /* FF3.7+ */
+      -o-transition: left 0.2s ease-in-out, top 0.2s ease-in-out, margin 0.2s ease-in-out, padding 0.2s ease-in-out;      /* Opera 10.5 */
+      -webkit-transition: left 0.2s ease-in-out, top 0.2s ease-in-out, margin 0.2s ease-in-out, padding 0.2s ease-in-out; /* Saf3.2+, Chrome */
+}
+.size-animation {
+      transition: max-height 0.2s ease-in-out, width 0.2s ease-in-out;
+      -moz-transition: max-height 0.2s ease-in-out, width 0.2s ease-in-out;    /* FF3.7+ */
+      -o-transition: max-height 0.2s ease-in-out, width 0.2s ease-in-out;      /* Opera 10.5 */
+      -webkit-transition: max-height 0.2s ease-in-out, width 0.2s ease-in-out; /* Saf3.2+, Chrome */    
+}

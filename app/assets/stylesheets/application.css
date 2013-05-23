@@ -45,6 +45,9 @@
      margin-top: 72px;
      font-family: 'cabinbold';
      font-size: 10pt;
+     background: url(bgs/1.jpg) no-repeat top center;
+     background-size: cover;
+     
  }
  
  em {
@@ -81,6 +84,11 @@
      background: url(ui/blue-noise.gif);
      color: #fff;     
  }
+ .black-transparent-bg {
+     background: #000;
+     background: rgba(0,0,0,0.8);
+     color: #fff;
+ }
  .inline {
      display: inline-block;
  }
@@ -88,13 +96,15 @@
  h1 {
      font-size:48pt;
  }
- h2 {
+ h2,.h2 {
      font-size: 20pt;
      line-height: 1.5em;
  }
+
  .m-padding {
      padding: 44px 27px 44px 27px;
  }
+ 
  .oxygen {
  font-family: 'Oxygen', sans-serif;
  font-weight: 300;

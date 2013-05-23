@@ -7,8 +7,19 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_reset
+ * 
+ *= require_tree 
+ *= require_reset 
  *= require_self
- *= require_tree .
  */
+
+ body {}
+ 
+ #topbar {
+     background: url(topbar-bg.jpg) repeat-x top;
+     position:fixed;
+     height:52px;
+     top:0;
+     width: 100%;
+     box-shadow: 0 0 10px black;
+ }

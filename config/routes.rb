@@ -1,6 +1,7 @@
 Homepage::Application.routes.draw do
 
   root :to => 'pages#index'
+  match '(/:action(/:id(.:format)))', :controller => 'Pages' 
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

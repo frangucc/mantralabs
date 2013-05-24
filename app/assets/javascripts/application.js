@@ -31,7 +31,7 @@
     
 	var tour = function(i) {
 	    var url = '/assets/bgs/t' + i + '.jpg';
-	    $.fadeBg(url,1000);
+	    $.fadeBg(url,1000,'easeInOutExpo');
 	    //$('body').css('background-image', 'url(/assets/bgs/t' + i + '.jpg)');
 		    
 	}

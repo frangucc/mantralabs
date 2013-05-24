@@ -1,5 +1,10 @@
 //= require jquery
 //= require jquery.easing.1.3
+//= require jquery-ui-1.8.22.custom.min
+//= require jquery.imagesloaded.min
+//= require jquery.scrollTo
+//= require jquery.easing.1.3
+//= require bigvideo
 
 (function($) {
 
@@ -20,10 +25,10 @@
 	 
 	 if (!fader.is(':visible')) {
 	     fader.css('background-image','url(' + url + ')');
-	     fader.delay(500).fadeIn(time,easing);
+	     fader.delay(800).fadeIn(time,easing);
 	 } else {
 	     fader2.css('background-image','url(' + url + ')');
-	     fader.delay(500).fadeOut(time,easing);
+	     fader.delay(800).fadeOut(time,easing);
 	 }
     }
     
@@ -46,8 +51,10 @@
 	    var arrow = $('.tour-arrow');
 	    arrow.animate({
 		'left': offset - arrow.width() / 2 + 'px'
-	    },400,'easeOutExpo');
+	    },600,'easeOutExpo');
+	    
 	});
+	
 	$('.tour-menu td').eq(0).trigger('click').promise().done(function(){
 	    $('.tour-arrow').fadeIn();
 	});

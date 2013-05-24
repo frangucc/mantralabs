@@ -78,6 +78,16 @@
      cursor: pointer;
      
  }
+ 
+ .keyboard-icon {
+     background: url(ui/keyboard.png) repeat-y right;
+     position: absolute;
+     right: -60px;
+     width: 42px;
+     height: 28px;
+     bottom: 15px;
+     opacity: 0.6;
+ }
 
  #topbar nav ul li img {
      margin-left: 5px;
@@ -102,6 +112,14 @@
      background: rgba(0,0,0,0.90);
      color: #fff;
  }
+ .white-bg {
+     background: #fff;
+     color: #000;
+ }
+ 
+ .black-text {
+     color: #000;
+ }
  .inline {
      display: inline-block;
  }
@@ -113,9 +131,20 @@
      font-size: 20pt;
      line-height: 1.5em;
  }
+ h3,.h3 {
+     font-size: 16pt;
+     line-height: 1.5em;
+ }
+  h4,.h4 {
+     font-size: 13pt;
+     line-height: 1.5em;
+ }
 
  .m-padding {
      padding: 44px 27px 44px 27px;
+ }
+ .s-padding {
+     padding: 10px;
  }
  
  .oxygen {
@@ -147,12 +176,20 @@
      clear: both;
  }
 
- 
+ .s-limit {
+     margin-bottom: 20px;
+ }
+ .s-limit-top {
+     margin-top: 20px;
+ }
  .m-limit-top {
      margin-top: 40px;
  }
  .m-limit {
      margin-bottom: 40px;
+ }
+ .inline-inline {
+     display: inline !important;
  }
  .frame {
      border: 1px solid #fff;

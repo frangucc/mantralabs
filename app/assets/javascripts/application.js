@@ -20,10 +20,10 @@
 	 
 	 if (!fader.is(':visible')) {
 	     fader.css('background-image','url(' + url + ')');
-	     fader.delay(100).fadeIn(time,easing);
+	     fader.delay(500).fadeIn(time,easing);
 	 } else {
 	     fader2.css('background-image','url(' + url + ')');
-	     fader.delay(100).fadeOut(time,easing);
+	     fader.delay(500).fadeOut(time,easing);
 	 }
     }
     

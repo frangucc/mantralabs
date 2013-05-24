@@ -82,6 +82,13 @@
      margin-left: 5px;
      margin-bottom: 3px;
  }
+ .tour-arrow {
+     background: url(ui/tour-arrow.png) no-repeat;
+     width:10px;
+     height:6px;
+     position:absolute;
+     bottom: 0;
+ }
  
  .blue-noise-bg {
      background: url(ui/blue-noise.gif);
@@ -136,12 +143,24 @@
  .cboth {
      clear: both;
  }
-<<<<<<< HEAD
+
  
  .m-limit-top {
      margin-top: 40px;
  }
-
+ .frame {
+     border: 1px solid #fff;
+     padding: 20px;
+     color: #fff;
+ }
+ 
+ table.menu {
+     width: 100%;
+ }
+ table.menu tr td {
+     text-align: center;
+     font-size: 12pt;
+ }
  .animation-color {
        transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
       -moz-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;    /* FF3.7+ */
@@ -167,7 +186,7 @@
  .small-static {
      position: static !important;
  }
-=======
+
 
  #videoTag{
  	position: absolute;
@@ -175,5 +194,5 @@
  	height: 1000px;
  	left: 0px;
  	top:-200px;
->>>>>>> 8d1afd67fe9f4b9c3ec2dcf6c42ce6f4abb18947
+}
  }

@@ -9,6 +9,9 @@ class PagesController < ApplicationController
    def video
 
    end
-
+	
+   def tour
+   
+   end
 
 end

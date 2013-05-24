@@ -136,6 +136,7 @@
  .cboth {
      clear: both;
  }
+<<<<<<< HEAD
  
  .m-limit-top {
      margin-top: 40px;
@@ -166,4 +167,13 @@
  .small-static {
      position: static !important;
  }
+=======
+
+ #videoTag{
+ 	position: absolute;
+ 	width: 1500px;
+ 	height: 1000px;
+ 	left: 0px;
+ 	top:-200px;
+>>>>>>> 8d1afd67fe9f4b9c3ec2dcf6c42ce6f4abb18947
  }

@@ -87,6 +87,7 @@ select {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 77.5em;
+  min-width: 320px;
   zoom: 1; }
   .row:before, .row:after {
     content: " ";

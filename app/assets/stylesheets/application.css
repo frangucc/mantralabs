@@ -130,3 +130,11 @@
  .cboth {
      clear: both;
  }
+
+ #videoTag{
+ 	position: absolute;
+ 	width: 1500px;
+ 	height: 1000px;
+ 	left: 0px;
+ 	top:-200px;
+ }

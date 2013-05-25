@@ -33,14 +33,14 @@
     $(window).load(function(){
     var BV = new $.BigVideo();
     BV.init();
-    BV.show('http://localhost:3000/assets/v1.mp4', {
+    BV.show('assets/v1.mp4', {
 	altSource:'vids/river.ogv'
     });
     
  	$('.tour-menu td').click(function(){
 
 	    var index = $('.tour-menu td').index(this) + 1;
-    BV.show('http://localhost:3000/assets/v' + index + '.mp4', {
+    BV.show('assets/v' + index + '.mp4', {
 	altSource:'vids/river.ogv'
     });
 	    

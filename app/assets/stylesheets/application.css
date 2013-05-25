@@ -64,7 +64,7 @@
     margin-top: 92px;
      font-family: 'cabinbold';
      font-size: 10pt;
-     background: url(bgs/2.jpg) no-repeat top center;
+     background: url(bgs/works_bg.jpg) no-repeat top center;
      background-size: cover;
      transition: background 0.5s linear;
  }

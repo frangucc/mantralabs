@@ -16,7 +16,7 @@ class PagesController < ApplicationController
    end
    
    def works
-   
+   @body_class = 'works_bg'
    end
    
    def worksingle

@@ -1,7 +1,6 @@
 <div class="big-shadow"></div>
-
-
-<div class="row">
+<div class="filldiv"></div>
+<div class="row b-limit-top">
 
     <div class="large-12 columns">
 	<div class="s-limit black-text"><h4>TOUR</h4></div>
@@ -20,36 +19,83 @@
 	    </table>       
 	    <div class="tour-arrow"></div>
 	    <div class="keyboard-icon"></div>
-	    
+
 	</div>
     </div>
-    <div class="large-9 left columns m-limit-top">
+    <div class="large-9 left columns m-limit-top tour-single-slogan">
+	<h1 class="blue-noise-bg inline-inline ">fdddd journey begins with conversations, evaluations and lots of notes.</h1>
+	<div><h3 class="white-bg s-padding oxygen">Mantra combines stakeholder knowledge with a heuristic evaluation process. We listen, learn, immerse, discover, evaluate and prepare. </h3></div>
+    </div>
+    <div class="large-9 left columns m-limit-top tour-single-slogan">
+	<h1 class="blue-noise-bg inline-inline ">Our user research methods establish a critical path for product development.</h1>
+	<div><h3 class="white-bg s-padding oxygen">Mantra’s HCI team finds the correct method to learn about your users and goals. We find patterns, distinction and clarity within the complexities. </h3></div>
+    </div>
+    <div class="large-9 left columns m-limit-top tour-single-slogan">
 	<h1 class="blue-noise-bg inline-inline ">Our journey begins with conversations, evaluations and lots of notes.</h1>
 	<div><h3 class="white-bg s-padding oxygen">Mantra combines stakeholder knowledge with a heuristic evaluation process. We listen, learn, immerse, discover, evaluate and prepare. </h3></div>
     </div>
+    <div class="large-9 left columns m-limit-top tour-single-slogan">
+	<h1 class="blue-noise-bg inline-inline ">Our journey begins with conversations, evaluations and lots of notes.</h1>
+	<div><h3 class="white-bg s-padding oxygen">Mantra combines stakeholder knowledge with a heuristic evaluation process. We listen, learn, immerse, discover, evaluate and prepare. </h3></div>
+    </div>
+    <div class="large-9 left columns m-limit-top tour-single-slogan">
+	<h1 class="blue-noise-bg inline-inline ">Our journey begins with conversations, evaluations and lots of notes.</h1>
+	<div><h3 class="white-bg s-padding oxygen">Mantra combines stakeholder knowledge with a heuristic evaluation process. We listen, learn, immerse, discover, evaluate and prepare. </h3></div>
+    </div>
+    <div class="large-9 left columns m-limit-top tour-single-slogan">
+	<h1 class="blue-noise-bg inline-inline ">Our journey begins with conversations, evaluations and lots of notes.</h1>
+	<div><h3 class="white-bg s-padding oxygen">Mantra combines stakeholder knowledge with a heuristic evaluation process. We listen, learn, immerse, discover, evaluate and prepare. </h3></div>
+    </div>
+    <div class="large-9 left columns m-limit-top tour-single-slogan">
+	<h1 class="blue-noise-bg inline-inline ">Our journey begins with conversations, evaluations and lots of notes.</h1>
+	<div><h3 class="white-bg s-padding oxygen">Mantra combines stakeholder knowledge with a heuristic evaluation process. We listen, learn, immerse, discover, evaluate and prepare. </h3></div>
+    </div>
+    <div class="large-9 left columns m-limit-top tour-single-slogan">
+	<h1 class="blue-noise-bg inline-inline ">Our journey begins with conversations, evaluations and lots of notes.</h1>
+	<div><h3 class="white-bg s-padding oxygen">Mantra combines stakeholder knowledge with a heuristic evaluation process. We listen, learn, immerse, discover, evaluate and prepare. </h3></div>
+    </div>
+     <div class="large-9 left columns m-limit-top tour-single-slogan">
+	<h1 class="blue-noise-bg inline-inline ">Our journey begins with conversations, evaluations and lots of notes.</h1>
+	<div><h3 class="white-bg s-padding oxygen">Mantra combines stakeholder knowledge with a heuristic evaluation process. We listen, learn, immerse, discover, evaluate and prepare. </h3></div>
+    </div>
+       
+        
 </div>
 
 
 
 <script>
     $(window).load(function(){
-    var BV = new $.BigVideo();
-    BV.init();
-    BV.show('assets/v1.mp4', {
-	altSource:'vids/river.ogv'
-    });
-    
- 	$('.tour-menu td').click(function(){
 
+	var BV = new $.BigVideo();
+	BV.init();
+	BV.show('http://localhost:3000/assets/v1.mp4', {
+	    altSource:'vids/river.ogv'
+	});
+	
+	$('.tour-menu td').click(function(){
+	    var body = $('body');
 	    var index = $('.tour-menu td').index(this) + 1;
-    BV.show('assets/v' + index + '.mp4', {
-	altSource:'vids/river.ogv'
-    });
-	    
-	});   
-    
-    
-    })
 
-   
+	    
+	    var fill = $('.filldiv');
+	    var bgUrl = '/assets/bgs/v' + index + '.jpg';
+	    fill.css('opacity',0).css('background-image','url(' + bgUrl + ')').fadeSlideIn(null,null,function(){
+		
+		body.css('background-image','url(' + bgUrl + ')');
+		BV.show('/assets/v' + index + '.mp4', {
+		    altSource:'vids/river.ogv'
+		});		
+		fill.delay(500).animate({'opacity':0},500,null,function(){
+		    
+		});
+		
+	    });
+	    
+	}); 
+	
+	
+    })
+    
+    
 </script>

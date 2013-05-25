@@ -1,5 +1,6 @@
 <div class="big-shadow"></div>
-<div class="row">
+<div class="filldiv"></div>
+<div class="row b-limit-top">
 
     <div class="large-12 columns">
 	<div class="s-limit black-text"><h4>TOUR</h4></div>
@@ -18,7 +19,7 @@
 	    </table>       
 	    <div class="tour-arrow"></div>
 	    <div class="keyboard-icon"></div>
-	    
+
 	</div>
     </div>
     <div class="large-9 left columns m-limit-top">
@@ -31,23 +32,35 @@
 
 <script>
     $(window).load(function(){
-    var BV = new $.BigVideo();
-    BV.init();
-    BV.show('http://localhost:3000/assets/v1.mp4', {
-	altSource:'vids/river.ogv'
-    });
-    
- 	$('.tour-menu td').click(function(){
-
+	var BV = new $.BigVideo();
+	BV.init();
+	BV.show('http://localhost:3000/assets/v1.mp4', {
+	    altSource:'vids/river.ogv'
+	});
+	
+	$('.tour-menu td').click(function(){
+	    var body = $('body');
 	    var index = $('.tour-menu td').index(this) + 1;
-    BV.show('http://localhost:3000/assets/v' + index + '.mp4', {
-	altSource:'vids/river.ogv'
-    });
-	    
-	});   
-    
-    
-    })
 
-   
+	    
+	    var fill = $('.filldiv');
+	    var bgUrl = '/assets/bgs/v' + index + '.jpg';
+	    fill.css('opacity',0).css('background-image','url(' + bgUrl + ')').fadeSlideIn(null,null,function(){
+		
+		body.css('background-image','url(' + bgUrl + ')');
+		BV.show('/assets/v' + index + '.mp4', {
+		    altSource:'vids/river.ogv'
+		});		
+		fill.delay(500).animate({'opacity':0},500,null,function(){
+		    
+		});
+		
+	    });
+	    
+	}); 
+	
+	
+    })
+    
+    
 </script>

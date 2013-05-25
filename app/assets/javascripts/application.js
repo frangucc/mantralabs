@@ -31,6 +31,21 @@
 	     fader.delay(800).fadeOut(time,easing);
 	 }
     }
+    $.fn.fadeSlideIn = function(time,easing,cb){
+	$(this).each(function(){
+	    var left = parseInt($(this).css('left'));
+	    
+	    $(this).css({
+		'opacity':0,
+		left: left+80+'px'
+	    }).animate({
+		'left':left+'px',
+		'opacity':1
+	    },time,easing,cb);	    
+	})
+
+	
+    }    
     
     $(document).ready(function(){
     

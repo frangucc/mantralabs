@@ -44,10 +44,12 @@
  
  body {
      margin-top: 92px;
+     
      font-family: 'cabinbold';
      font-size: 10pt;
      background: url(bgs/1.jpg) no-repeat top center;
      background-size: cover;
+     background-attachment: fixed;
      transition: background 0.5s linear;
 
  }
@@ -103,6 +105,10 @@
      bottom: 15px;
      opacity: 0.6;
  }
+ .work-single img {
+     width:100%;
+     height: auto;
+ }
 
  #topbar nav ul li img {
      margin-left: 5px;
@@ -155,6 +161,18 @@
      line-height: 1.5em;
  }
 
+ .work-single-header {
+     background: none !important;
+     height: 420px;
+     color: #fff;
+ }
+ 
+ .work-single-info {
+     background: #fff;
+     padding-top: 60px;
+     padding-bottom: 60px;
+ }
+ 
  .m-padding {
      padding: 44px 27px 44px 27px;
  }
@@ -203,6 +221,13 @@
  }
  .m-limit {
      margin-bottom: 40px;
+ }
+ .b-limit {
+     margin-bottom: 80px;
+     
+ }
+ .b-limit-top {
+     margin-top: 80px;
  }
  .inline-inline {
      display: inline !important;

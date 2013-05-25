@@ -44,6 +44,7 @@
  
  body {
      margin-top: 92px;
+     margin-bottom:100px;
      font-family: 'cabinbold';
      font-size: 10pt;
      background: url(bgs/1.jpg) no-repeat top center;
@@ -102,6 +103,10 @@
      height: 28px;
      bottom: 15px;
      opacity: 0.6;
+ }
+ .work-single img {
+     width:100%;
+     height: auto;
  }
 
  #topbar nav ul li img {

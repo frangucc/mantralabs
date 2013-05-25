@@ -49,6 +49,7 @@
      font-size: 10pt;
      background: url(bgs/1.jpg) no-repeat top center;
      background-size: cover;
+     background-attachment: fixed;
      transition: background 0.5s linear;
 
  }
@@ -160,6 +161,18 @@
      line-height: 1.5em;
  }
 
+ .work-single-header {
+     background: none !important;
+     height: 420px;
+     color: #fff;
+ }
+ 
+ .work-single-info {
+     background: #fff;
+     padding-top: 60px;
+     padding-bottom: 60px;
+ }
+ 
  .m-padding {
      padding: 44px 27px 44px 27px;
  }

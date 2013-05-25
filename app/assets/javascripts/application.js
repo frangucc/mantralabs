@@ -34,7 +34,7 @@
     $.fn.fadeSlideIn = function(time,easing,cb){
 	$(this).each(function(){
 	    var left = parseInt($(this).css('left'));
-	    
+	    left = isNaN(left) ? 0 : left;
 	    $(this).css({
 		'opacity':0,
 		left: left+80+'px'
@@ -60,6 +60,7 @@
 	$('.tour-menu td').click(function(){
 	    var t = $(this);
 	    var index = $('.tour-menu td').index(this) + 1;
+	    $('.tour-single-slogan').hide().eq(index).delay(100).show().fadeSlideIn();
 	    tour(index);
 	    t.addClass('clicked').siblings().removeClass('clicked');	
 	    var offset = t.position().left + t.width()/2;

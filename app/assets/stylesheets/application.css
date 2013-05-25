@@ -128,6 +128,7 @@
      background: url(ui/blue-noise.gif);
      color: #fff; 
  }
+ .tour-single-slogan {position: relative; display: none;}
  .black-transparent-bg {
      background: #000;
      background: rgba(0,0,0,0.90);

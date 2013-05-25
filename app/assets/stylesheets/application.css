@@ -50,9 +50,19 @@
      background-size: cover;
      transition: background 0.5s linear;
 
-     
  }
- 
+ .home_bg {
+    margin-top: 92px;
+     font-family: 'cabinbold';
+     font-size: 10pt;
+     background: url(bgs/2.jpg) no-repeat top center;
+     background-size: cover;
+     transition: background 0.5s linear;
+ }
+
+ a:visited {
+    color:#2c6eb7;
+ }
  em {
      font-family: 'cabinbold_italic';
  }

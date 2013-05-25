@@ -46,7 +46,7 @@
      margin-top: 92px;
      font-family: 'cabinbold';
      font-size: 10pt;
-     /*background: url(bgs/1.jpg) no-repeat top center;*/
+     background: url(bgs/1.jpg) no-repeat top center;
      background-size: cover;
      transition: background 0.5s linear;
 
@@ -110,7 +110,7 @@
   #bgfader2 {z-index: -4;}
  .blue-noise-bg {
      background: url(ui/blue-noise.gif);
-     color: #fff;     
+     color: #fff; 
  }
  .black-transparent-bg {
      background: #000;
@@ -150,6 +150,7 @@
  }
  .s-padding {
      padding: 10px;
+     margin-top:7px;
  }
  
  .oxygen {
@@ -195,6 +196,7 @@
  }
  .inline-inline {
      display: inline !important;
+
  }
  .frame {
      border: 1px solid #fff;

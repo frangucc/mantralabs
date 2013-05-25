@@ -18,7 +18,7 @@
 			// on a touchscreen unless the play event is attached to a user click
 			forceAutoplay:false,
 			controls:true,
-			doLoop:false
+			doLoop:true
         };
 
         var BigVideo = this,

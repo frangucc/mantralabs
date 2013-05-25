@@ -10,7 +10,7 @@
 		    <td>RESEARCH</td>
 		    <td>SYNTHESIZE</td>
 		    <td>DESIGN</td>
-		    <td>VALIDDATE</td>
+		    <td>VALIDATE</td>
 		    <td>BUILD</td>
 		    <td>ANALYZE</td>
 		    <td>OPTIMIZE</td>
@@ -21,7 +21,7 @@
 	    
 	</div>
     </div>
-    <div class="large-8 left columns m-limit-top">
+    <div class="large-9 left columns m-limit-top">
 	<h1 class="blue-noise-bg inline-inline ">Our journey begins with conversations, evaluations and lots of notes.</h1>
 	<div><h3 class="white-bg s-padding oxygen">Mantra combines stakeholder knowledge with a heuristic evaluation process. We listen, learn, immerse, discover, evaluate and prepare. </h3></div>
     </div>
@@ -33,14 +33,14 @@
     $(window).load(function(){
     var BV = new $.BigVideo();
     BV.init();
-    BV.show('http://localhost:3000/assets/v1.mp4', {
+    BV.show('assets/v1.mp4', {
 	altSource:'vids/river.ogv'
     });
     
  	$('.tour-menu td').click(function(){
 
 	    var index = $('.tour-menu td').index(this) + 1;
-    BV.show('http://localhost:3000/assets/v' + index + '.mp4', {
+    BV.show('assets/v' + index + '.mp4', {
 	altSource:'vids/river.ogv'
     });
 	    

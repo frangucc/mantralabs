@@ -44,7 +44,7 @@
  
  body {
      margin-top: 92px;
-     margin-bottom:100px;
+     
      font-family: 'cabinbold';
      font-size: 10pt;
      background: url(bgs/1.jpg) no-repeat top center;
@@ -221,6 +221,13 @@
  }
  .m-limit {
      margin-bottom: 40px;
+ }
+ .b-limit {
+     margin-bottom: 80px;
+     
+ }
+ .b-limit-top {
+     margin-top: 80px;
  }
  .inline-inline {
      display: inline !important;

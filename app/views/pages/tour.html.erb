@@ -78,7 +78,7 @@ accident. Success is preedicated on careful optimization.</h3></div>
 
 	var BV = new $.BigVideo();
 	BV.init();
-	BV.show('http://localhost:3000/assets/v1.mp4', {
+	BV.show('https://s3.amazonaws.com/mantralabs/videos/v1.mp4', {
 	    altSource:'vids/river.ogv'
 	});
 	
@@ -92,7 +92,7 @@ accident. Success is preedicated on careful optimization.</h3></div>
 	    fill.css('opacity',0).css('background-image','url(' + bgUrl + ')').fadeSlideIn(null,null,function(){
 		
 		body.css('background-image','url(' + bgUrl + ')');
-		BV.show('/assets/v' + index + '.mp4', {
+		BV.show('https://s3.amazonaws.com/mantralabs/videos/v' + index + '.mp4', {
 		    altSource:'vids/river.ogv'
 		});		
 		fill.delay(500).animate({'opacity':0},500,null,function(){

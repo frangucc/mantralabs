@@ -20,7 +20,7 @@ class PagesController < ApplicationController
    end
    
    def worksingle
-   
+   @body_class = 'works_monthlys'
    end
    
    def team

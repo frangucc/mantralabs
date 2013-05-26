@@ -106,10 +106,10 @@
  .keyboard-icon {
      background: url(ui/keyboard.png) repeat-y right;
      position: absolute;
-     right: -60px;
-     width: 42px;
-     height: 28px;
-     bottom: 15px;
+     right: -85px;
+     width: 91px;
+     height: 56px;
+     bottom: 5px;
      opacity: 0.6;
  }
  .work-single img {

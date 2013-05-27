@@ -81,7 +81,7 @@
  }
  
  #topbar {
-     background: url(topbar-bg.jpg) repeat-x top;
+     background: url(topbar-bg.jpg) repeat-x top;     
      position:fixed;
      height:52px;
      top:0;
@@ -105,6 +105,7 @@
  }
  
  .topbar-dropdown {
+     padding-top:40px;
      position: fixed;
      height: auto;
      padding-bottom: 40px;
@@ -112,8 +113,22 @@
      z-index: 199;
      top: -200px;
      background: url(ui/topbar-dropdown-bg.jpg) #ccd0d1 repeat-x;
+     background-size: cover;
      box-shadow: 0 0 10px black;
      color: #5e5e60;
+ }
+ 
+ .p-rel {
+     position: relative;
+     
+ }
+ .bottom-label {
+     position: absolute;
+     bottom: 0;
+     right: 0;     
+ }
+ .bottom-label * {
+     font-size: 24pt;
  }
  .topbar-dropdown ul li {
      font-size: 12pt;
@@ -165,7 +180,7 @@
  .tour-single-slogan {position: relative; display: none;}
  .black-transparent-bg {
      background: #000;
-     background: rgba(0,0,0,0.90);
+     background: rgba(0,0,0,0.80);
      color: #fff;
  }
  .white-bg {
@@ -361,4 +376,25 @@
  	left: 0px;
  	top:-200px;
 }
+.topbar-dropdown, #topbar {
+    position: static;
+    
+}
+.topbar-dropdown {
+    margin-left: 100%;
+    display:none;
+}
+.topbar-dropdown.opened {
+    margin-left: 0;
+    display: block;
+}
+
+#rightbar {
+    margin-top: 40px;
+    background: #fff;
+}
+#rightbar nav ul li {
+    float: none;
+}
+
  }

@@ -62,6 +62,9 @@ class PagesController < ApplicationController
 
    def work_bevel
    end
+   
+   def ux
+   end
 
 
 

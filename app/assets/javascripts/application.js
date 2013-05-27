@@ -89,7 +89,7 @@
 	});
 	
 	$('#a-offerings').mouseenter(function(){
-	    $('.offerings').stop().animate({top:'50px'},400,'easeInOutExpo').addClass('opened');
+	    $('.offerings').stop().animate({top:'52px'},400,'easeInOutExpo').addClass('opened');
 	});
 	$('.offerings,#a-offerings').mouseleave(function(){
 	    $(this).stop().animate({top:'-100%'},400,'easeInOutExpo').removeClass('opened');

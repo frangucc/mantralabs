@@ -82,7 +82,7 @@
  
  #topbar {
      background: url(topbar-bg.jpg) repeat-x top;     
-     position:fixed;
+     position: relative;
      height:52px;
      top:0;
      width: 100%;
@@ -111,7 +111,7 @@
      padding-bottom: 40px;
      width: 100%;
      z-index: 199;
-     top: -200px;
+     top: -100%;
      background: url(ui/topbar-dropdown-bg.jpg) #ccd0d1 repeat-x;
      background-size: cover;
      box-shadow: 0 0 10px black;
@@ -179,6 +179,10 @@
  }
  .pdf {
     margin:7px 0 0px -13px;
+ }
+ 
+ .row.fullwidth {
+     max-width: none !important;
  }
  .tour-single-slogan {position: relative; display: none;}
  .black-transparent-bg {
@@ -254,6 +258,10 @@
     font-size:44px;
  }
  
+ .gray-mark {
+     background-color: #212121;
+     color: #fff;
+ }
  .m-padding {
      padding: 44px 27px 44px 27px;
  }

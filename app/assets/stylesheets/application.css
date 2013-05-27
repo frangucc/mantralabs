@@ -114,6 +114,7 @@
      background: url(ui/topbar-dropdown-bg.jpg) #ccd0d1 repeat-x;
      box-shadow: 0 0 10px black;
      color: #5e5e60;
+     opacity: 0.97;
  }
  .topbar-dropdown ul li {
      font-size: 12pt;
@@ -154,10 +155,12 @@
      background: url(ui/blue-noise.gif);
      color: #fff; 
      line-height:78px;
+     opacity: 0.92;
  }
   .blue-noise-bg-small {
      background: url(ui/blue-noise.gif);
      color: #fff; 
+     opacity: 0.92;
  }
  .pdf {
     margin:7px 0 0px -13px;
@@ -167,10 +170,17 @@
      background: #000;
      background: rgba(0,0,0,0.90);
      color: #fff;
+     opacity: 0.8;
  }
+ .black-quote {
+    font-size:29px;
+    line-height:36px;
+ }
+
  .white-bg {
      background: #fff;
      color: #000;
+     opacity: 0.9;
  }
  
  .black-text {
@@ -223,8 +233,9 @@
 
  .work-single-header {
      background: none !important;
-     height: 420px;
+     height: 440px;
      color: #fff;
+     padding-top:80px;
  }
 
  .work-single-info {

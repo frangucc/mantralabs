@@ -168,6 +168,9 @@
  .blue-noise-bg {
      background: url(ui/blue-noise.gif);
      color: #fff; 
+     
+ }
+ .big-line-height {
      line-height:78px;
  }
   .blue-noise-bg-small {
@@ -264,6 +267,10 @@
  font-weight: 300;
  }
  
+ .rounded {
+     border-radius: 3px;
+ }
+ 
  #rightbar {
      position: fixed;
      right: 0;
@@ -322,6 +329,10 @@
      padding: 20px;
      color: #fff;
  }
+ .white-border {
+     border: 1px solid #fff;
+ }
+ 
  
  table.menu {
      width: 100%;

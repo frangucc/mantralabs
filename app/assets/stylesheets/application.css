@@ -114,7 +114,6 @@
      background: url(ui/topbar-dropdown-bg.jpg) #ccd0d1 repeat-x;
      box-shadow: 0 0 10px black;
      color: #5e5e60;
-     opacity: 0.97;
  }
  .topbar-dropdown ul li {
      font-size: 12pt;

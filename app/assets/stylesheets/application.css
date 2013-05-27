@@ -206,7 +206,33 @@ em {
     color: #000;
 }
 .ux-right {
-    background: #ddd;
+    
+}
+.ovfh {
+    overflow: hidden;
+}
+.absfill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+#ux1 {
+    background-image: url(ux/s1.jpg);
+}
+.ux-next {
+    position: absolute;
+    background: #000;
+    background: rgba(0,0,0,0.95);
+    right: 0;
+    bottom:0;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+    z-index: 200;
 }
 .black-text {
     color: #000;
@@ -256,12 +282,30 @@ h4,.h5 {
     text-shadow: 1px 1px 2px #666;
 }
 
+.ux-slide-left {
+    position: absolute;
+    display: none;
+}
+.ux-slide-left.active {
+    display: block;
+    width: 90%;
+}
+.ux-slide-right {
+    position: absolute;
+    display: none;
+}
+.ux-slide-right.active {
+    display: block;
+    width: 100%;
+}
 .work-single-header {
     background: none !important;
     height: 420px;
     color: #fff;
 }
-
+.fluid-width-video-wrapper {
+    padding-top: 100% !important;
+}
 .work-single-info {
     background: #fff;
     padding-top: 60px;

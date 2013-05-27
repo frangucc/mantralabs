@@ -4,6 +4,7 @@
 //= require jquery.imagesloaded.min
 //= require jquery.scrollTo
 //= require jquery.easing.1.3
+//= require jquery.fitvids
 //= require bigvideo
 
 (function($) {
@@ -43,8 +44,30 @@
 		'opacity':1
 	    },time,easing,cb);	    
 	})
-
+    }
+    $.fn.cascade = function(time,easing) {
+	var t = $(this);
+	var child = $('> *', this);
+	child.each(function(i){
+	    $(this).css('position','relative').delay(i*40+100).fadeSlideIn(time,easing);
+	})
+    }
+    
+    $.fn.strethDown = function(marginDown)
+    {	
+	var t = $(this);
+	if ( !t.length) { return $(); }
+	var streth = function() {			
+	    var height=$(window).height() - t.offset().top - marginDown;		
+	    t.height(height);			
+	}
 	
+	streth();
+	$(window).resize(function(){
+	    streth();
+	})
+	return t;
+
     }    
     
     $(document).ready(function(){
@@ -56,6 +79,7 @@
 		    
 	}
 	
+	$('.strethdown,.ux-slide-right').strethDown(0);
 	
 	$('.tour-menu td').click(function(){
 	    var t = $(this);
@@ -94,6 +118,8 @@
 	$('.offerings,#a-offerings').mouseleave(function(){
 	    $(this).stop().animate({top:'-100%'},400,'easeInOutExpo').removeClass('opened');
 	});
+	
+	$('.embed-vid').fitVids();
 	
     })
 

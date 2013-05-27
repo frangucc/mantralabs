@@ -88,12 +88,12 @@
 	    }	
 	});
 	
-	$('#a-offerings').hover(function(){
+	$('#a-offerings').mouseenter(function(){
 	    $('.offerings').stop().animate({top:'50px'},400,'easeInOutExpo');
-	},
-        function(){
-	    $('.offerings').stop().animate({top:'-200px'},400,'easeInOutExpo');
-	})
+	});
+	$('.offerings').mouseleave(function(){
+	    $(this).stop().animate({top:'-200px'},400,'easeInOutExpo');
+	});
 	
     })
 

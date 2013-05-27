@@ -79,6 +79,7 @@
  #big-video-control {
      display:none !important;
  }
+ 
  #topbar {
      background: url(topbar-bg.jpg) repeat-x top;
      position:fixed;

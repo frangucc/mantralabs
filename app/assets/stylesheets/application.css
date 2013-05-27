@@ -60,23 +60,27 @@
      background-size: cover;
      transition: background 0.5s linear;
  }
- .works_bg {
+ .works {
     margin-top: 92px;
      font-family: 'cabinbold';
      font-size: 10pt;
      background: url(bgs/works_bg.jpg) no-repeat top center;
      background-size: cover;
      transition: background 0.5s linear;
+     background-attachment: fixed !important;
  }
- .works_monthlys {
+ .backgrounds {
     margin-top: 92px;
      font-family: 'cabinbold';
      font-size: 10pt;
-     background: url(bgs/work-monthlys.jpg) no-repeat top center;
-     background-size:cover;
      transition: background 0.5s linear;
      height:440px;
+     background-attachment: fixed !important;
  }
+
+
+
+
 
 
 

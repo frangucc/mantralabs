@@ -53,29 +53,14 @@
 
  }
  .home_bg {
-    margin-top: 92px;
-     font-family: 'cabinbold';
-     font-size: 10pt;
-     background: url(bgs/3.jpg) no-repeat top center;
-     background-size: cover;
-     transition: background 0.5s linear;
+     background-image: url(bgs/3.jpg);
  }
  .works {
-    margin-top: 92px;
-     font-family: 'cabinbold';
-     font-size: 10pt;
-     background: url(bgs/works_bg.jpg) no-repeat top center;
-     background-size: cover;
-     transition: background 0.5s linear;
-     background-attachment: fixed !important;
+     background-image: url(bgs/works_bg.jpg);
+
  }
  .backgrounds {
-    margin-top: 92px;
-     font-family: 'cabinbold';
-     font-size: 10pt;
      transition: background 0.5s linear;
-     height:440px;
-     background-attachment: fixed !important;
  }
 
 

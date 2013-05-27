@@ -71,6 +71,7 @@ body {
 
 a:visited {
     color:#5e5e5e;
+
 }
 em {
     font-family: 'cabinbold_italic';
@@ -251,6 +252,137 @@ em {
     font-weight: lighter;
 }
 .black-text p {
+
+ }
+ em {
+     font-family: 'cabinbold_italic';
+ }
+ 
+ #big-video-control {
+     display:none !important;
+ }
+ 
+ #topbar {
+     background: url(topbar-bg.jpg) repeat-x top;
+     position:fixed;
+     height:52px;
+     top:0;
+     width: 100%;
+     box-shadow: 0 0 10px black;
+     color: #5e5e5e;
+     z-index: 200;
+ }
+ 
+ #topbar nav ul li {
+     display: inline-block;
+     line-height: 52px;
+     padding:0 20px 0 20px;
+     background: url(ui/topbar-limiter.png) repeat-y right;
+     margin: 0;
+     float: left;
+     overflow: hidden;
+     max-height: 52px;
+     cursor: pointer;
+     
+ }
+ 
+ .topbar-dropdown {
+     position: fixed;
+     height: auto;
+     padding-bottom: 40px;
+     width: 100%;
+     z-index: 199;
+     top: -200px;
+     background: url(ui/topbar-dropdown-bg.jpg) #ccd0d1 repeat-x;
+     box-shadow: 0 0 10px black;
+     color: #5e5e60;
+     opacity: 0.97;
+ }
+ .topbar-dropdown ul li {
+     font-size: 12pt;
+     line-height: 2em;
+ }
+ 
+ .keyboard-icon {
+     background: url(ui/keyboard.png) repeat-y right;
+     position: absolute;
+     right: -85px;
+     width: 91px;
+     height: 56px;
+     bottom: 5px;
+     opacity: 0.6;
+ }
+ .work-single img {
+     width:100%;
+     height: auto;
+ }
+
+ #topbar nav ul li img {
+     margin-left: 5px;
+     margin-bottom: 3px;
+ }
+ .tour-arrow {
+     background: url(ui/tour-arrow.png) no-repeat;
+     width:10px;
+     height:6px;
+     position:absolute;
+     bottom: 0;
+     display:none;
+ }
+ #bgfader, #bgfader2 {position:fixed;background-size:cover;width:100%;height:100%;left:0px;top:0px;z-index:-3;}
+  #bgfader2 {z-index: -4;}
+  .filldiv {position:fixed;background-size:cover;width:100%;height:100%;left:0px;top:0px;background-position: center;}
+  .filldiv.bg {z-index: -999;}
+ .blue-noise-bg {
+     background: url(ui/blue-noise.gif);
+     color: #fff; 
+     line-height:78px;
+     opacity: 0.92;
+ }
+  .blue-noise-bg-small {
+     background: url(ui/blue-noise.gif);
+     color: #fff; 
+     opacity: 0.92;
+ }
+ .pdf {
+    margin:7px 0 0px -13px;
+ }
+ .tour-single-slogan {position: relative; display: none;}
+ .black-transparent-bg {
+     background: #000;
+     background: rgba(0,0,0,0.90);
+     color: #fff;
+     opacity: 0.8;
+ }
+ .black-quote {
+    font-size:29px;
+    line-height:36px;
+ }
+
+ .white-bg {
+     background: #fff;
+     color: #000;
+     opacity: 0.9;
+ }
+ 
+ .black-text {
+     color: #000;
+ }
+  .white-text {
+     color: #fff;
+     text-shadow: 0px 1px 1px #676767;
+     font-family: 'Oxygen', sans-serif;
+ }
+ .blue-text {
+     color: #1863ba;
+ }
+  .black-text h3 {
+     color: #000;
+     font-family: 'Oxygen', sans-serif;
+     font-weight: lighter;
+ }
+ .black-text p {
+
     font-size:16px; 
     line-height:23px;
     padding:0 10px 0 0;
@@ -282,6 +414,7 @@ h4,.h5 {
     text-shadow: 1px 1px 2px #666;
 }
 
+
 .ux-slide-left {
     position: absolute;
     display: none;
@@ -311,7 +444,22 @@ h4,.h5 {
     padding-top: 60px;
     padding-bottom: 60px;
 }
-.work-single-info h1 {
+.work-single-info h1 {}
+
+ .work-single-header {
+     background: none !important;
+     height: 440px;
+     color: #fff;
+     padding-top:80px;
+ }
+
+ .work-single-info {
+     background: #fff;
+     padding-top: 60px;
+     padding-bottom: 60px;
+ }
+ .work-single-info h1 {
+
     font-size:44px;
 }
 
@@ -384,6 +532,7 @@ h4,.h5 {
 .divider {
     border-bottom:1px solid #d6d6d6;
     padding-bottom:40px;
+
 }
 .inline-inline {
     display: inline !important;
@@ -423,6 +572,43 @@ table.menu tr td {
     -moz-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;    /* FF3.7+ */
     -o-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;      /* Opera 10.5 */
     -webkit-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out; /* Saf3.2+, Chrome */ 
+
+ }
+ .inline-inline {
+     display: inline !important;
+
+ }
+ .frame {
+     border: 1px solid #fff;
+     padding: 20px;
+     color: #fff;
+ }
+ 
+ table.menu {
+     width: 100%;
+ }
+ table.menu tr td {
+     text-align: center;
+     font-size: 12pt;
+     cursor: pointer;
+     text-shadow: 0px 1px 1px #676767;
+
+     font-weight: 600;
+     font-family: 'Oxygen', sans-serif;
+ }
+ .big-shadow {
+     background: url(ui/big-shadow.png) repeat-x top;
+     position:fixed;
+     height:252px;
+     top:0;
+     width: 100%;         
+     z-index: -1;    
+ }
+ .animation-color {
+       transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+      -moz-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;    /* FF3.7+ */
+      -o-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;      /* Opera 10.5 */
+
 }
 
 .position-animation {

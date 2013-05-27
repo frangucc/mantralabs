@@ -478,6 +478,10 @@ h4,.h5 {
     font-family: 'Oxygen', sans-serif;
     font-weight: 300;
 }
+.georgia {
+     font-family: Georgia, sans-serif;
+    font-weight: 300;   
+}
 
 .rounded {
     border-radius: 3px;
@@ -637,9 +641,13 @@ table.menu tr td {
 	left: 0px;
 	top:-200px;
     }
-    .topbar-dropdown, #topbar {
-	position: static;
+    #topbar {
+	position: relative;
 
+    }
+    .topbar-dropdown {
+	position: relative;
+	top: auto !important;
     }
     .topbar-dropdown {
 	margin-left: 100%;
@@ -652,10 +660,16 @@ table.menu tr td {
 
     #rightbar {
 	margin-top: 40px;
-	background: #fff;
+	
     }
     #rightbar nav ul li {
 	float: none;
+    }
+    .ux-slide-left {
+	position: relative;
+    }
+    .small-height-auto {
+	height: auto !important;
     }
 
 }

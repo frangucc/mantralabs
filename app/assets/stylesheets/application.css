@@ -53,29 +53,14 @@
 
  }
  .home_bg {
-    margin-top: 92px;
-     font-family: 'cabinbold';
-     font-size: 10pt;
-     background: url(bgs/3.jpg) no-repeat top center;
-     background-size: cover;
-     transition: background 0.5s linear;
+     background-image: url(bgs/3.jpg);
  }
  .works {
-    margin-top: 92px;
-     font-family: 'cabinbold';
-     font-size: 10pt;
-     background: url(bgs/works_bg.jpg) no-repeat top center;
-     background-size: cover;
-     transition: background 0.5s linear;
-     background-attachment: fixed !important;
+     background-image: url(bgs/works_bg.jpg);
+
  }
  .backgrounds {
-    margin-top: 92px;
-     font-family: 'cabinbold';
-     font-size: 10pt;
      transition: background 0.5s linear;
-     height:440px;
-     background-attachment: fixed !important;
  }
 
 
@@ -94,6 +79,7 @@
  #big-video-control {
      display:none !important;
  }
+ 
  #topbar {
      background: url(topbar-bg.jpg) repeat-x top;
      position:fixed;
@@ -102,7 +88,7 @@
      width: 100%;
      box-shadow: 0 0 10px black;
      color: #5e5e5e;
-     z-index: 2;
+     z-index: 200;
  }
  
  #topbar nav ul li {
@@ -116,6 +102,22 @@
      max-height: 52px;
      cursor: pointer;
      
+ }
+ 
+ .topbar-dropdown {
+     position: fixed;
+     height: auto;
+     padding-bottom: 40px;
+     width: 100%;
+     z-index: 199;
+     top: -200px;
+     background: url(ui/topbar-dropdown-bg.jpg) #ccd0d1 repeat-x;
+     box-shadow: 0 0 10px black;
+     color: #5e5e60;
+ }
+ .topbar-dropdown ul li {
+     font-size: 12pt;
+     line-height: 2em;
  }
  
  .keyboard-icon {
@@ -178,6 +180,9 @@
      color: #fff;
      text-shadow: 0px 1px 1px #676767;
      font-family: 'Oxygen', sans-serif;
+ }
+ .blue-text {
+     color: #1863ba;
  }
   .black-text h3 {
      color: #000;

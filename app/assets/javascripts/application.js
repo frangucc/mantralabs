@@ -86,7 +86,15 @@
 	    if(e.keyCode == 39 || e.keyCode == 40) {//right
 		$('.tour-menu td.clicked').nextOrFirst('td').trigger('click');
 	    }	
-	});	    
+	});
+	
+	$('#a-offerings').mouseenter(function(){
+	    $('.offerings').stop().animate({top:'50px'},400,'easeInOutExpo');
+	});
+	$('.offerings').mouseleave(function(){
+	    $(this).stop().animate({top:'-200px'},400,'easeInOutExpo');
+	});
+	
     })
 
 

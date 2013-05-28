@@ -137,9 +137,10 @@
 	    },400,'easeInOutExpo').removeClass('opened');
 	});
 	$('body').click(function(){
-	    $(this).stop().animate({
-		top:'-100%'
-	    },400,'easeInOutExpo').removeClass('opened');
+              $('.offerings,#a-offerings').trigger('mouseleave');
+	})
+	$('.offerings,#a-offerings').click(function(e){
+	    e.stopPropagation();
 	})
 	
 	$('.embed-vid').fitVids();

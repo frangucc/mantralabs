@@ -67,11 +67,15 @@ body {
 
 
 
-
+a {text-decoration:none;}
 
 a:visited {
     color:#5e5e5e;
 
+}
+a:hover {
+    text-decoration:underline;
+    color:#2a71c2;
 }
 em {
     font-family: 'cabinbold_italic';
@@ -229,8 +233,8 @@ em {
     position: absolute;
     background: #000;
     background: rgba(0,0,0,0.95);
-    right: 0;
-    bottom:0;
+    right:0px;
+    bottom:50px;
     padding: 10px 20px 10px 20px;
     color: #fff;
     z-index: 200;
@@ -420,7 +424,8 @@ h4,.h5 {
 }
 .ux-slide-left.active {
     display: block;
-    width: 90%;
+    width: 80%;
+    padding:0 0 0 44px;
 }
 .ux-slide-right {
     position: absolute;
@@ -480,7 +485,7 @@ h4,.h5 {
 }
 .georgia {
      font-family: Georgia, sans-serif;
-    font-weight: 300;   
+    font-weight: 100 !important;   
 }
 
 .rounded {

@@ -6,6 +6,7 @@
 //= require jquery.easing.1.3
 //= require jquery.fitvids
 //= require jquery.mCustomScrollbar.min
+//= require jquery.reveal
 //= require bigvideo
 
 

@@ -221,6 +221,8 @@ em {
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-position: center;
+    text-align: center;
 }
 #ux1 {
     background-image: url(ux/s1.jpg);
@@ -235,6 +237,10 @@ em {
     color: #fff;
     z-index: 200;
     cursor: pointer;
+}
+.ux-vid {
+    width: 90%;
+    margin: auto;
 }
 .black-text {
     color: #000;
@@ -417,7 +423,9 @@ h4,.h5 {
 
 .ux-slide-left {
     position: absolute;
-    display: none;
+    width: 90%;
+    display:none;
+
 }
 .ux-slide-left.active {
     display: block;
@@ -425,11 +433,15 @@ h4,.h5 {
 }
 .ux-slide-right {
     position: absolute;
+    width: 90%;
     display: none;
+    
 }
 .ux-slide-right.active {
     display: block;
     width: 100%;
+    z-index:150;
+    background-color: #ddd;
 }
 .work-single-header {
     background: none !important;

@@ -38,10 +38,12 @@
 	    <div class="absfill" style="background-image: url(assets/bgs/home_bg3.jpg);"></div>	    
 	</div>
 	<div class="ux-slide-right ">
-	    <div class="absfill embed-vid"><iframe width="560" height="315" src="http://www.youtube.com/embed/h2YkqGKMxuY" frameborder="0" allowfullscreen></iframe></div>	    
+	    <div class="ux-vid">
+		<iframe width="100%" height="100%" src="http://www.youtube.com/embed/h2YkqGKMxuY" frameborder="0" allowfullscreen></iframe>
+	    </div>	    
 	</div>
 	<div class="ux-slide-right ">
-	    <div class="absfill"><iframe src="http://player.vimeo.com/video/8055192" width="100%" height="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>	    
+	    <div class="ux-vid"><iframe src="http://player.vimeo.com/video/8055192" width="100%" height="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>	    
 	</div>
 		
 	
@@ -54,13 +56,15 @@
 $(document).ready(function(){
     $('.ux-slide-left.active').cascade();	
     $('.ux-next').click(function(){
+	
 	var left = $('.ux-slide-left.active');
 	var right = $('.ux-slide-right.active');
 	left.removeClass('active').nextOrFirst('.ux-slide-left').addClass('active');
 	right.removeClass('active').nextOrFirst('.ux-slide-right').addClass('active');
 	$('.ux-slide-left.active').cascade();	
 	$('.ux-slide-right.active').delay(200).fadeSlideIn();
-	
+	$(window).resize();
+	$('.ux-vid').vCenter();
     });
 })    
 </script>

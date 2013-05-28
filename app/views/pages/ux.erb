@@ -59,7 +59,7 @@ $(document).ready(function(){
 	left.removeClass('active').nextOrFirst('.ux-slide-left').addClass('active');
 	right.removeClass('active').nextOrFirst('.ux-slide-right').addClass('active');
 	$('.ux-slide-left.active').cascade();	
-	
+	$('.ux-slide-right.active').delay(200).fadeSlideIn();
 	
     });
 })    

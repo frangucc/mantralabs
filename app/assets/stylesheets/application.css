@@ -234,6 +234,7 @@ em {
     padding: 10px 20px 10px 20px;
     color: #fff;
     z-index: 200;
+    cursor: pointer;
 }
 .black-text {
     color: #000;

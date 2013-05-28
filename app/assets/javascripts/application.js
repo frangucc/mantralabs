@@ -108,11 +108,10 @@
     $.fn.vCenter = function() {
          var t = $(this);
 	 var p = t.parent();
-	 var marg = (p.height() - t.height()) / 2;
-	 console.log('p' + p.height() + 't' + t.height());
+	 var marg = (p.height() - t.height()) / 2;	 
 	 t.css('margin-top',marg);
 	$(window).resize(function(){	    
-	 var marg = (p.height() - t.height()) / 2;
+	 var marg = (p.height() - t.height()) / 2;	 
 	 t.css('margin-top',marg);
 	});	 
     }

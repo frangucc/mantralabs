@@ -59,8 +59,10 @@ $(document).ready(function(){
 	
 	var left = $('.ux-slide-left.active');
 	var right = $('.ux-slide-right.active');
-	left.removeClass('active').nextOrFirst('.ux-slide-left').addClass('active');
-	right.removeClass('active').nextOrFirst('.ux-slide-right').addClass('active');
+	$('.ux-slide-left.last').removeClass('last')
+	left.addClass('last').removeClass('active').nextOrFirst('.ux-slide-left').addClass('active');
+	$('.ux-slide-right.last').removeClass('last')
+	right.addClass('last').removeClass('active').nextOrFirst('.ux-slide-right').addClass('active');
 	$('.ux-slide-left.active').cascade();	
 	$('.ux-slide-right.active').delay(200).fadeSlideIn();
 	$(window).resize();

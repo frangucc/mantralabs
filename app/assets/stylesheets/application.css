@@ -241,6 +241,7 @@ em {
 .ux-vid {
     width: 90%;
     margin: auto;
+    
 }
 .black-text {
     color: #000;
@@ -421,28 +422,40 @@ h4,.h5 {
 }
 
 
-.ux-slide-left {
-    position: absolute;
-    width: 90%;
-    display:none;
 
-}
 .ux-slide-left.active {
     display: block;
     width: 90%;
-}
-.ux-slide-right {
-    position: absolute;
-    width: 90%;
-    display: none;
-    
+    opacity: 1;
 }
 .ux-slide-right.active {
     display: block;
     width: 100%;
     z-index:150;
-    background-color: #ddd;
+    opacity: 1;
+    
+    z-index: 12;
 }
+.ux-slide-left {
+    position: absolute;
+    width: 90%;
+    opacity: 0;
+    display: none;
+    
+}
+.ux-slide-right {
+    background-color: #ddd;
+    position: absolute;
+    width: 100%;    
+    z-index: 10;
+}
+.ux-slide-left.last {
+    
+}
+.ux-slide-right.last {
+    z-index: 11;
+}
+
 .work-single-header {
     background: none !important;
     height: 420px;
@@ -684,5 +697,7 @@ table.menu tr td {
     .small-height-auto {
 	height: auto !important;
     }
-
+    .ux-next {
+	bottom: auto;
+    }
 }

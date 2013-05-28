@@ -657,7 +657,13 @@ table.menu tr td {
     -o-transition: max-height 0.2s ease-in-out, width 0.2s ease-in-out;      /* Opera 10.5 */
     -webkit-transition: max-height 0.2s ease-in-out, width 0.2s ease-in-out; /* Saf3.2+, Chrome */    
 }
-
+/*Webkit based, Chrome, Safari... */
+::-webkit-scrollbar {height: 4px;width:4px;background: #ddd;} 
+/* Track */
+::-webkit-scrollbar-track {-webkit-border-radius: 0px;border-radius: 0px;} 
+/* Handle */
+::-webkit-scrollbar-thumb {-webkit-border-radius: 0px;border-radius: 0px;background: #777;}
+::-webkit-scrollbar-thumb:window-inactive {background: #333;}
 
 @media only screen and (max-width: 48em) {
     .small-static {

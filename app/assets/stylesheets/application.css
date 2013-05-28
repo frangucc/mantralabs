@@ -10,7 +10,9 @@
  * 
  *= require_tree 
  *= require_bigvideo 
+ *= require_jquery.mCustomScrollbar
  *= require_reset 
+ *= require_reveal
  *= require_self
 */
 
@@ -67,7 +69,10 @@ body {
 
 
 
-a {text-decoration:none;}
+a {
+    text-decoration: none;
+}
+
 
 a:visited {
     color:#5e5e5e;
@@ -193,9 +198,7 @@ em {
     background: url(ui/blue-noise.gif);
     color: #fff; 
 }
-.pdf {
-    margin:7px 0 0px -13px;
-}
+
 
 .row.fullwidth {
     max-width: none !important;
@@ -216,6 +219,9 @@ em {
 .ovfh {
     overflow: hidden;
 }
+.ovfa {
+    overflow: auto;
+}
 .absfill {
     position: absolute;
     top: 0;
@@ -225,6 +231,8 @@ em {
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-position: center;
+    text-align: center;
 }
 #ux1 {
     background-image: url(ux/s1.jpg);
@@ -233,11 +241,18 @@ em {
     position: absolute;
     background: #000;
     background: rgba(0,0,0,0.95);
-    right:0px;
-    bottom:50px;
+
+    right: 0;
+    top: 80px;
     padding: 10px 20px 10px 20px;
     color: #fff;
-    z-index: 200;
+    z-index: 5;
+    cursor: pointer;
+}
+.ux-vid {
+    width: 90%;
+    margin: auto;
+    
 }
 .black-text {
     color: #000;
@@ -348,7 +363,8 @@ em {
      opacity: 0.92;
  }
  .pdf {
-    margin:7px 0 0px -13px;
+    background: url(ui/pdf.png) #eff0f4 center no-repeat;
+    height: 116px;
  }
  .tour-single-slogan {position: relative; display: none;}
  .black-transparent-bg {
@@ -418,23 +434,42 @@ h4,.h5 {
 }
 
 
-.ux-slide-left {
-    position: absolute;
-    display: none;
-}
+
 .ux-slide-left.active {
     display: block;
-    width: 80%;
-    padding:0 0 0 44px;
-}
-.ux-slide-right {
-    position: absolute;
-    display: none;
+
+    width: 90%;
+    opacity: 1;
+    
 }
 .ux-slide-right.active {
     display: block;
     width: 100%;
+    z-index:150;
+    opacity: 1;
+    
+    z-index: 12;
 }
+.ux-slide-left {
+    position: absolute;
+    width: 90%;
+    opacity: 0;
+    display: none;
+    
+}
+.ux-slide-right {
+    background-color: #ddd;
+    position: absolute;
+    width: 100%;    
+    z-index: 10;
+}
+.ux-slide-left.last {
+    
+}
+.ux-slide-right.last {
+    z-index: 11;
+}
+
 .work-single-header {
     background: none !important;
     height: 420px;
@@ -612,6 +647,9 @@ table.menu tr td {
      width: 100%;         
      z-index: -1;    
  }
+ .tour-nav {
+     display: none;
+ }
  .animation-color {
        transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
       -moz-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;    /* FF3.7+ */
@@ -631,9 +669,16 @@ table.menu tr td {
     -o-transition: max-height 0.2s ease-in-out, width 0.2s ease-in-out;      /* Opera 10.5 */
     -webkit-transition: max-height 0.2s ease-in-out, width 0.2s ease-in-out; /* Saf3.2+, Chrome */    
 }
-
+/*Webkit based, Chrome, Safari... */
+::-webkit-scrollbar {height: 4px;width:4px;background: #ddd;} 
+/* Track */
+::-webkit-scrollbar-track {-webkit-border-radius: 0px;border-radius: 0px;} 
+/* Handle */
+::-webkit-scrollbar-thumb {-webkit-border-radius: 0px;border-radius: 0px;background: #777;}
+::-webkit-scrollbar-thumb:window-inactive {background: #333;}
 
 @media only screen and (max-width: 48em) {
+
     .small-static {
 	position: static !important;
     }
@@ -676,5 +721,19 @@ table.menu tr td {
     .small-height-auto {
 	height: auto !important;
     }
-
+    .ux-next {
+	bottom: auto;
+    }
+    .tour-nav {
+	display: table-cell;
+    }
+    .tour-menu td.tour-nav-title {
+	display: none;	
+    }
+    .tour-menu td.tour-nav-title.clicked {
+	display: table-cell;
+    }
+    .small-hide {
+	display: none !important;
+    }
 }

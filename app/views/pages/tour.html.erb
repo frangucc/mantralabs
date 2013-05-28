@@ -7,18 +7,20 @@
 	<div class="frame">
 	    <table class="menu tour-menu">
 		<tr>
-		    <td>ENGAGE</td>
-		    <td>RESEARCH</td>
-		    <td>SYNTHESIZE</td>
-		    <td>DESIGN</td>
-		    <td>VALIDATE</td>
-		    <td>BUILD</td>
-		    <td>ANALYZE</td>
-		    <td>OPTIMIZE</td>
+		    <td class="tour-nav tour-prev"><img src="assets/ui/white-arrow-left.png"/></td>
+		    <td class="tour-nav-title">ENGAGE</td>
+		    <td class="tour-nav-title">RESEARCH</td>
+		    <td class="tour-nav-title">SYNTHESIZE</td>
+		    <td class="tour-nav-title">DESIGN</td>
+		    <td class="tour-nav-title">VALIDATE</td>
+		    <td class="tour-nav-title">BUILD</td>
+		    <td class="tour-nav-title">ANALYZE</td>
+		    <td class="tour-nav-title">OPTIMIZE</td>
+		    <td class="tour-nav tour-next"><img src="assets/ui/white-arrow-right.png"/></td>
 		</tr>
 	    </table>       
-	    <div class="tour-arrow"></div>
-	    <div class="keyboard-icon"></div>
+	    <div class="tour-arrow small-hide"></div>
+	    <div class="keyboard-icon small-hide"></div>
 
 	</div>
     </div>
@@ -26,24 +28,22 @@
 	<h1 class="blue-noise-bg inline-inline big-line-height">fffff journey begins with conversations, evaluations and lots of notes.</h1>
 	<div><h3 class="white-bg s-padding oxygen">Mantra combines stakeholder knowledge with a heuristic evaluation process. We listen, learn, immerse, discover, evaluate and prepare. </h3></div>
     </div>
-     <div class="large-9 left columns m-limit-top tour-single-slogan">
-		
-		<h1 class="blue-noise-bg inline-inline big-line-height">Our journey begins with conversations, evaluations and lots of notes.</h1>
+    <div class="large-9 left columns m-limit-top tour-single-slogan">
+
+	<h1 class="blue-noise-bg inline-inline big-line-height">Our journey begins with conversations, evaluations and lots of notes.</h1>
 	<div><h3 class="white-bg s-padding oxygen">Mantra combines stakeholder knowledge with a heuristic evaluation process. We listen, learn, immerse, discover, evaluate and prepare. </h3></div>
     </div>
     <div class="large-10 left columns m-limit-top tour-single-slogan">
-	
-	<h1 class="blue-noise-bg inline-inline big-line-height">Our user research methods establish a critical path for product development.</h1>
-	<div class="row m-limit">
-		<div class="large-12 left columns">
-			<div class="large-2 left columns pdf">
-		    <img src="assets/ui/pdf.jpg"/>
-			</div>
-		    <h3 class="white-bg s-padding oxygen">Mantra’s HCI team finds the correct method to learn about your users and goals. We find patterns, distinction and clarity within the complexities. </h3>
-		</div>
-    </div>
 
+	<h1 class="blue-noise-bg inline-inline big-line-height">Our user research methods establish a critical path for product development.</h1>
+	<div class="row m-limit collapse">
+	    <a href="#"><div class="large-2 small-3 columns s-padding pdf"></div>	    </a>
+	    <div class="large-10 small-9 columns">
+		<h3 class="white-bg s-padding oxygen">Mantra’s HCI team finds the correct method to learn about your users and goals. We find patterns, distinction and clarity within the complexities. </h3>
+	    </div>
 	</div>
+
+    </div>
     <div class="large-9 left columns m-limit-top tour-single-slogan">
 	<h1 class="blue-noise-bg inline-inline big-line-height">We synthesize our research into creative frameworks for cross-displinary tradeoff. </h1>
 	<div><h3 class="white-bg s-padding oxygen">Our synthesis manifests as “design fuel” - useful insights on users motivations, barriers, questions and attitudes. </h3></div>
@@ -54,7 +54,7 @@
     </div>
     <div class="large-9 left columns m-limit-top tour-single-slogan">
 	<h1 class="blue-noise-bg inline-inline big-line-height">Before writing code, we validate prototypes with real users. This moment is always pivotal.
-</h1>
+	</h1>
 	<div><h3 class="white-bg s-padding oxygen">Mantra has a knack for finding out where we are wrong before investing in development. Learn more about this process. </h3></div>
     </div>
     <div class="large-9 left columns m-limit-top tour-single-slogan">
@@ -63,39 +63,55 @@
     </div>
     <div class="large-9 left columns m-limit-top tour-single-slogan">
 	<h1 class="blue-noise-bg inline-inline big-line-height">We roll minimum viable products 
-in strategic phases to prove concept while achieving business goals.</h1>
+	    in strategic phases to prove concept while achieving business goals.</h1>
 	<div><h3 class="white-bg s-padding oxygen">Whether your kickstarter team or supplemental development partner, we’ve been through battle together. Mantra was born ready to ship product. </h3></div>
     </div>
     <div class="large-10 left columns m-limit-top tour-single-slogan">
 	<h1 class="blue-noise-bg inline-inline big-line-height">We intuitively understand the products we help design and know exactly what to measure. </h1>
 	<div><h3 class="white-bg s-padding oxygen">Collecting insights from live market data helps us understand where improvements need to be made.</h3></div>
     </div>
-     <div class="large-9 left columns m-limit-top tour-single-slogan">
+    <div class="large-9 left columns m-limit-top tour-single-slogan">
 	<h1 class="blue-noise-bg inline-inline big-line-height">The optimal product state
-is acheived after careful execution.
-We engineer our own luck, together. </h1>
+	    is acheived after careful execution.
+	    We engineer our own luck, together. </h1>
 	<div><h3 class="white-bg s-padding oxygen">A successful product in todays market is never an
-accident. Success is preedicated on careful optimization.</h3></div>
+		accident. Success is preedicated on careful optimization.</h3></div>
     </div>
-       
-        
+
+
 </div>
 
 
 
 <script>
-    $(window).load(function(){
-
-	var BV = new $.BigVideo();
-	BV.init();
-	BV.show('https://s3.amazonaws.com/mantralabs/videos/v1.mp4', {
-	    altSource:'vids/river.ogv'
-	});
+    $(document).ready(function(){
+ 
+        var body = $('body');
 	
-	$('.tour-menu td').click(function(){
-	    var body = $('body');
-	    var index = $('.tour-menu td').index(this) + 1;
+	var tour = function(i) {
+	    var url = '/assets/bgs/t' + i + '.jpg';
+	    $.fadeBg(url,1000,'easeInOutExpo'); 
+	}
+	
+	
 
+	
+	$('.tour-menu td.tour-nav-title').click(function(){
+	    if ( $('.tour-arrow:animated,#bgfader:animated,#bgfader2:animated').length ) {
+		return;
+	    }	    
+	    var t = $(this);
+	    var index = $('.tour-menu td.tour-nav-title').index(this) + 1;
+	    $('.tour-single-slogan').hide().eq(index).delay(100).show().fadeSlideIn();
+	    tour(index);
+	    t.addClass('clicked').siblings().removeClass('clicked');	
+	    var offset = t.position().left + t.width()/2;
+	    var arrow = $('.tour-arrow');
+	    arrow.animate({
+		'left': offset - arrow.width() / 2 + 'px'
+	    },600,'easeOutExpo');
+	    
+	    
 	    
 	    var fill = $('.filldiv');
 	    var bgUrl = '/assets/bgs/v' + index + '.jpg';
@@ -109,11 +125,41 @@ accident. Success is preedicated on careful optimization.</h3></div>
 		    
 		});
 		
-	    });
+	    });	    
 	    
-	}); 
+	    
+	});
 	
-	
+	$('.tour-menu td.tour-nav-title').eq(0).trigger('click').promise().done(function(){
+	    $('.tour-arrow').fadeIn();
+	});
+        
+	$('.tour-next').click(function(){
+	    $('.tour-menu td.clicked').nextOrFirst('td.tour-nav-title').trigger('click');
+	})
+	$('.tour-prev').click(function(){
+	    $('.tour-menu td.clicked').prevOrLast('td.tour-nav-title').trigger('click');
+	})	
+	//keyboard support (left/right arrow nav)
+	$(document).keyup(function(e){			
+
+	    if(e.keyCode == 37 || e.keyCode == 38) {//left
+		$('.tour-menu td.clicked').prevOrLast('td.tour-nav-title').trigger('click');
+	    }	
+	    if(e.keyCode == 39 || e.keyCode == 40) {//right
+		$('.tour-menu td.clicked').nextOrFirst('td.tour-nav-title').trigger('click');
+	    }	
+	});
+    });
+    
+    
+    $(window).load(function(){
+
+	BV = new $.BigVideo();
+	BV.init();
+	BV.show('https://s3.amazonaws.com/mantralabs/videos/v1.mp4', {
+	    altSource:'vids/river.ogv'
+	});
     })
     
     

@@ -638,6 +638,9 @@ table.menu tr td {
      width: 100%;         
      z-index: -1;    
  }
+ .tour-nav {
+     display: none;
+ }
  .animation-color {
        transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
       -moz-transition: border 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;    /* FF3.7+ */
@@ -666,6 +669,7 @@ table.menu tr td {
 ::-webkit-scrollbar-thumb:window-inactive {background: #333;}
 
 @media only screen and (max-width: 48em) {
+
     .small-static {
 	position: static !important;
     }
@@ -710,5 +714,17 @@ table.menu tr td {
     }
     .ux-next {
 	bottom: auto;
+    }
+    .tour-nav {
+	display: table-cell;
+    }
+    .tour-menu td.tour-nav-title {
+	display: none;	
+    }
+    .tour-menu td.tour-nav-title.clicked {
+	display: table-cell;
+    }
+    .small-hide {
+	display: none !important;
     }
 }

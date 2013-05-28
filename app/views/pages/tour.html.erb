@@ -7,18 +7,20 @@
 	<div class="frame">
 	    <table class="menu tour-menu">
 		<tr>
-		    <td>ENGAGE</td>
-		    <td>RESEARCH</td>
-		    <td>SYNTHESIZE</td>
-		    <td>DESIGN</td>
-		    <td>VALIDATE</td>
-		    <td>BUILD</td>
-		    <td>ANALYZE</td>
-		    <td>OPTIMIZE</td>
+		    <td class="tour-nav tour-prev"><img src="assets/ui/white-arrow-left.png"/></td>
+		    <td class="tour-nav-title">ENGAGE</td>
+		    <td class="tour-nav-title">RESEARCH</td>
+		    <td class="tour-nav-title">SYNTHESIZE</td>
+		    <td class="tour-nav-title">DESIGN</td>
+		    <td class="tour-nav-title">VALIDATE</td>
+		    <td class="tour-nav-title">BUILD</td>
+		    <td class="tour-nav-title">ANALYZE</td>
+		    <td class="tour-nav-title">OPTIMIZE</td>
+		    <td class="tour-nav tour-next"><img src="assets/ui/white-arrow-right.png"/></td>
 		</tr>
 	    </table>       
-	    <div class="tour-arrow"></div>
-	    <div class="keyboard-icon"></div>
+	    <div class="tour-arrow small-hide"></div>
+	    <div class="keyboard-icon small-hide"></div>
 
 	</div>
     </div>
@@ -84,18 +86,34 @@ accident. Success is preedicated on careful optimization.</h3></div>
 
 
 <script>
-    $(window).load(function(){
-
-	var BV = new $.BigVideo();
-	BV.init();
-	BV.show('https://s3.amazonaws.com/mantralabs/videos/v1.mp4', {
-	    altSource:'vids/river.ogv'
-	});
+    $(document).ready(function(){
+ 
+        var body = $('body');
 	
-	$('.tour-menu td').click(function(){
-	    var body = $('body');
-	    var index = $('.tour-menu td').index(this) + 1;
+	var tour = function(i) {
+	    var url = '/assets/bgs/t' + i + '.jpg';
+	    $.fadeBg(url,1000,'easeInOutExpo'); 
+	}
+	
+	
 
+	
+	$('.tour-menu td.tour-nav-title').click(function(){
+	    if ( $('.tour-arrow:animated,#bgfader:animated,#bgfader2:animated').length ) {
+		return;
+	    }	    
+	    var t = $(this);
+	    var index = $('.tour-menu td.tour-nav-title').index(this) + 1;
+	    $('.tour-single-slogan').hide().eq(index).delay(100).show().fadeSlideIn();
+	    tour(index);
+	    t.addClass('clicked').siblings().removeClass('clicked');	
+	    var offset = t.position().left + t.width()/2;
+	    var arrow = $('.tour-arrow');
+	    arrow.animate({
+		'left': offset - arrow.width() / 2 + 'px'
+	    },600,'easeOutExpo');
+	    
+	    
 	    
 	    var fill = $('.filldiv');
 	    var bgUrl = '/assets/bgs/v' + index + '.jpg';
@@ -109,11 +127,41 @@ accident. Success is preedicated on careful optimization.</h3></div>
 		    
 		});
 		
-	    });
+	    });	    
 	    
-	}); 
+	    
+	});
 	
-	
+	$('.tour-menu td.tour-nav-title').eq(0).trigger('click').promise().done(function(){
+	    $('.tour-arrow').fadeIn();
+	});
+        
+	$('.tour-next').click(function(){
+	    $('.tour-menu td.clicked').nextOrFirst('td.tour-nav-title').trigger('click');
+	})
+	$('.tour-prev').click(function(){
+	    $('.tour-menu td.clicked').prevOrLast('td.tour-nav-title').trigger('click');
+	})	
+	//keyboard support (left/right arrow nav)
+	$(document).keyup(function(e){			
+
+	    if(e.keyCode == 37 || e.keyCode == 38) {//left
+		$('.tour-menu td.clicked').prevOrLast('td.tour-nav-title').trigger('click');
+	    }	
+	    if(e.keyCode == 39 || e.keyCode == 40) {//right
+		$('.tour-menu td.clicked').nextOrFirst('td.tour-nav-title').trigger('click');
+	    }	
+	});
+    });
+    
+    
+    $(window).load(function(){
+
+	BV = new $.BigVideo();
+	BV.init();
+	BV.show('https://s3.amazonaws.com/mantralabs/videos/v1.mp4', {
+	    altSource:'vids/river.ogv'
+	});
     })
     
     

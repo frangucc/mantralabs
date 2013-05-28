@@ -10,6 +10,7 @@
  * 
  *= require_tree 
  *= require_bigvideo 
+ *= require_jquery.mCustomScrollbar
  *= require_reset 
  *= require_self
 */
@@ -212,6 +213,9 @@ em {
 .ovfh {
     overflow: hidden;
 }
+.ovfa {
+    overflow: auto;
+}
 .absfill {
     position: absolute;
     top: 0;
@@ -232,10 +236,10 @@ em {
     background: #000;
     background: rgba(0,0,0,0.95);
     right: 0;
-    bottom:0;
+    top: 80px;
     padding: 10px 20px 10px 20px;
     color: #fff;
-    z-index: 200;
+    z-index: 5;
     cursor: pointer;
 }
 .ux-vid {
@@ -427,6 +431,7 @@ h4,.h5 {
     display: block;
     width: 90%;
     opacity: 1;
+    
 }
 .ux-slide-right.active {
     display: block;

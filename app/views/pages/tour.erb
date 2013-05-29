@@ -85,13 +85,18 @@
 
 <script>
     $(document).ready(function(){
- 
+ 		BV = new $.BigVideo();
+		BV.init();
+		BV.show('https://s3.amazonaws.com/mantralabs/videos/v1.mp4', {
+		    altSource:'vids/river.ogv'
+		});
+
         var body = $('body');
 	
-	var tour = function(i) {
-	    var url = '/assets/bgs/v' + i + '.jpg';
-	    $.fadeBg(url,1000,'easeInOutExpo'); 
-	}
+		var tour = function(i) {
+		    var url = '/assets/bgs/v' + i + '.jpg';
+		    $.fadeBg(url,1000,'easeInOutExpo'); 
+		}
 	
 	
 
@@ -153,14 +158,6 @@
     });
     
     
-    $(window).load(function(){
-
-	BV = new $.BigVideo();
-	BV.init();
-	BV.show('https://s3.amazonaws.com/mantralabs/videos/v1.mp4', {
-	    altSource:'vids/river.ogv'
-	});
-    })
     
     
 </script>

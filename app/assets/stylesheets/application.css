@@ -182,6 +182,10 @@ em {
 .vmiddle {
     vertical-align: middle;
 }
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
 #bgfader, #bgfader2 {position:fixed;background-size:cover;width:100%;height:100%;left:0px;top:0px;z-index:-3;}
 #bgfader2 {z-index: -4;}
 .filldiv {position:fixed;background-size:cover;width:100%;height:100%;left:0px;top:0px;background-position: center;}

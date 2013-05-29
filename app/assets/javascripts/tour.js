@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
- 		BV = new $.BigVideo();
+ 		BV = new $.BigVideo({useFlashForFirefox:true});
 		BV.init();
 		BV.show('https://s3.amazonaws.com/mantralabs/videos/v1.mp4', {
 		    altSource:'vids/river.ogv'
@@ -18,7 +18,8 @@ $(document).ready(function(){
 	$('.tour-menu td.tour-nav-title').click(function(){
 	    if ( $('.tour-arrow:animated,#bgfader:animated,#bgfader2:animated').length ) {
 		return;
-	    }	    
+	    }
+            	    
 	    var t = $(this);
 	    var index = $('.tour-menu td.tour-nav-title').index(this) + 1;
 	    $('.tour-single-slogan').hide().eq(index).delay(100).show().fadeSlideIn();

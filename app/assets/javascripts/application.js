@@ -1,13 +1,16 @@
+//= require modernizr
 //= require jquery
 //= require jquery.easing.1.3
 //= require jquery-ui-1.8.22.custom.min
 //= require jquery.imagesloaded.min
 //= require jquery.scrollTo
 //= require jquery.easing.1.3
+//= require video
 //= require jquery.fitvids
 //= require jquery.mCustomScrollbar.min
 //= require jquery.reveal
 //= require bigvideo
+
 
 
 (function($) {
@@ -118,7 +121,8 @@
 	$(window).resize(function(){	    
 	    var marg = (p.height() - t.height()) / 2;	 
 	    t.css('margin-top',marg);
-	});	 
+	});
+	return $(this);
     }
     
     

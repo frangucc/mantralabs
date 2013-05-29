@@ -40,18 +40,20 @@
 
 
 
-    <div class="large-6 columns ux-right strethdown ovfh">
+    <div class="large-6 columns ux-right strethdown ovfh no-padding-left">
 	
 	<div class="ux-slide-right active">
 	    <div class="absfill" style="background-image: url(assets/ux/s1.jpg);"></div>	    
 	</div>
 	<div class="ux-slide-right ">
 	    <div class="ux-vid">
-		<iframe width="100%" height="100%" src="http://www.youtube.com/embed/h2YkqGKMxuY" frameborder="0" allowfullscreen></iframe>
+		<iframe width="100%" height="100%" src="http://www.youtube.com/embed/h2YkqGKMxuY" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 	    </div>	    
 	</div>
 	<div class="ux-slide-right ">
-	    <div class="ux-vid"><iframe src="http://player.vimeo.com/video/8055192" width="100%" height="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>	    
+	    <div class="ux-vid">
+		<iframe width="100%" height="100%" src="http://player.vimeo.com/video/8055192" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	    </div>	    
 	</div>
 	<div class="ux-slide-right">
 	    <div class="absfill" style="background-image: url(assets/bgs/t9.jpg);"></div>	    
@@ -65,17 +67,23 @@
 <script>
 $(document).ready(function(){
     $('.ux-slide-left.active').cascade();	
-    $('.ux-next').click(function(){
+    $('.ux-next').click(function(){	
 	
 	var left = $('.ux-slide-left.active');
-	var right = $('.ux-slide-right.active');
+	var right = $('.ux-slide-right.active');	
+	
 	$('.ux-slide-left.last').removeClass('last')
 	left.addClass('last').removeClass('active').nextOrFirst('.ux-slide-left').addClass('active');
+	
+	
 	$('.ux-slide-right.last').removeClass('last')
 	right.addClass('last').removeClass('active').nextOrFirst('.ux-slide-right').addClass('active');
+	
+	
 	$('.ux-slide-left.active').cascade();	
 	$('.ux-slide-right.active').delay(200).fadeSlideIn();
-	$(window).resize();
+	
+	//$(window).resize();
 	$('.ux-vid').vCenter();
     });
 })    

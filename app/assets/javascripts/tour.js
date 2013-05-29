@@ -15,11 +15,14 @@ $(document).ready(function(){
 	
 
 	
-	$('.tour-menu td.tour-nav-title').click(function(){
+	$('.tour-menu td.tour-nav-title').click(function(){	    
 	    if ( $('.tour-arrow:animated,#bgfader:animated,#bgfader2:animated').length ) {
 		return;
 	    }
-            	    
+	    if ( window.blockTourSlide ) {
+		return;
+	    }
+            window.blockTourSlide = true;	    
 	    var t = $(this);
 	    var index = $('.tour-menu td.tour-nav-title').index(this) + 1;
 	    $('.tour-single-slogan').hide().eq(index).delay(100).show().fadeSlideIn();
@@ -42,7 +45,7 @@ $(document).ready(function(){
 		    altSource:'vids/river.ogv'
 		});		
 		fill.delay(500).animate({'opacity':0},500,null,function(){
-		    
+		    window.blockTourSlide = false;	    
 		});
 		
 	    });	    

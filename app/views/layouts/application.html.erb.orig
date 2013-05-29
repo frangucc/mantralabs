@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homepage</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= yield :javascript_includes %>
+  <%= csrf_meta_tags %>
+<<<<<<< HEAD
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>  
+=======
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>
+  
+>>>>>>> ab1e21c9cd48b236d8cf3eb77d67df3b753d6b31
+</head>
+<body class="backgrounds" style="background-image: url(assets/bgs/<%= "#{@body_class}".strip %>.jpg);">
+   <!-- <div id="bgfader"></div>
+    <div id="bgfader2"></div>
+    !-->
+<%= render "shared/topbar" %>
+    
+<%= yield %>
+
+<%= render "shared/rightbar" %>
+
+
+
+</body>
+</html>

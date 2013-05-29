@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
  		BV = new $.BigVideo();
 		BV.init();
@@ -11,7 +12,6 @@ $(document).ready(function(){
 		    var url = '/assets/bgs/v' + i + '.jpg';
 		    $.fadeBg(url,1000,'easeInOutExpo'); 
 		}
-	
 	
 
 	

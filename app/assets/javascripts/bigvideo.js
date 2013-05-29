@@ -43,10 +43,13 @@
         // If only using mp4s and on firefox, use flash fallback
         var ua = navigator.userAgent.toLowerCase();
         var isFirefox = ua.indexOf('firefox') != -1;
+        
+        //TODO firefox uses OGG video
+        /*
         if (settings.useFlashForFirefox && (isFirefox)) {
 			VideoJS.options.techOrder = ['flash'];
 		}
-
+		*/
 
 		function updateSize() {
 			var windowW = $(window).width();

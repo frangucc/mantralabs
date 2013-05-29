@@ -9,6 +9,7 @@
 //= require jquery.fitvids
 //= require jquery.mCustomScrollbar.min
 //= require jquery.reveal
+//= require jquery.hoverIntent.minified
 //= require bigvideo
 
 
@@ -130,13 +131,17 @@
  
         $('.strethdown,.ux-slide-right').strethDown(0);
 
-	
-	$('#a-offerings').mouseenter(function(){
+	$('#a-offerings').hoverIntent(function(){
 	    $('.offerings').stop().animate({
 		top:'52px'
 	    },400,'easeInOutExpo').addClass('opened');
+	},function(){
+	    $(this).stop().animate({
+		top:'-100%'
+	    },400,'easeInOutExpo').removeClass('opened');
 	});
-	$('.offerings,#a-offerings').mouseleave(function(){
+
+	$('.offerings').mouseleave(function(){
 	    $(this).stop().animate({
 		top:'-100%'
 	    },400,'easeInOutExpo').removeClass('opened');

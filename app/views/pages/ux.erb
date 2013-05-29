@@ -1,5 +1,5 @@
 <div class="row fullwidth">
-    <div class="large-6 columns strethdown ovfh small-height-auto  ovfa">
+    <div class="large-6 size-animation columns strethdown ovfh small-height-auto  ovfa ux-left">
 	<div class="ux-next h3">NEXT</div>
 	<div class="b-limit-top">
 	    <div class="backarrow vmiddle"></div>
@@ -40,7 +40,7 @@
 
 
 
-    <div class="large-6 columns ux-right strethdown ovfh no-padding-left">
+    <div class="large-6 size-animation columns ux-right strethdown ovfh no-padding-left left">
 	
 	<div class="ux-slide-right active">
 	    <div class="img-slider-nav">
@@ -50,12 +50,12 @@
 	    </div>
 	    <div class="absfill" style="background-image: url(assets/ux/s1.jpg);"></div>	    
 	</div>
-	<div class="ux-slide-right ">
+	<div class="ux-slide-right slide-with-video">
 	    <div class="ux-vid">
 		<iframe width="100%" height="100%" src="http://www.youtube.com/embed/h2YkqGKMxuY" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 	    </div>	    
 	</div>
-	<div class="ux-slide-right ">
+	<div class="ux-slide-right slide-with-video">
 	    <div class="ux-vid">
 		<iframe width="100%" height="100%" src="http://player.vimeo.com/video/8055192" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 	    </div>	    
@@ -75,7 +75,16 @@ $(document).ready(function(){
     $('.ux-next').click(function(){	
 	
 	var left = $('.ux-slide-left.active');
-	var right = $('.ux-slide-right.active');	
+	var right = $('.ux-slide-right.active');
+
+if ( right.nextOrFirst().hasClass('slide-with-video') ) {
+    $('.ux-left').removeClass('large-6').addClass('large-4');
+    $('.ux-right').removeClass('large-6').addClass('large-8');
+    
+} else {
+    $('.ux-left').removeClass('large-4').addClass('large-6');
+    $('.ux-right').removeClass('large-8').addClass('large-6');    
+}
 	
 	$('.ux-slide-left.last').removeClass('last')
 	left.addClass('last').removeClass('active').nextOrFirst('.ux-slide-left').addClass('active');

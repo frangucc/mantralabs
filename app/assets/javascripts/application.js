@@ -95,12 +95,13 @@
 	
 	var setRatio = function(){
 	    var elems = $.classObjToJQuery(classes,'ratio');
-	    console.log(elems);
+	    
 	    elems.each(function(){
 		var t = $(this);
 		var ratio = t.attr('ratio');
 		t.attr('ratio',ratio);
-		t.height(t.width()/ratio);	    
+		t.height(t.width()/ratio);
+t.resize(function(){alert('d');})		
 	    })	    
 	}
 	setRatio();

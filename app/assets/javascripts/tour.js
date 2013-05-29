@@ -25,12 +25,12 @@ $(document).ready(function(){
             window.blockTourSlide = true;	    
 	    var t = $(this);
 	    var index = $('.tour-menu td.tour-nav-title').index(this) + 1;
-	    $('.tour-single-slogan').hide().eq(index).delay(100).show().fadeSlideIn();
+	    $('.tour-single-slogan').hide().eq(index).stop().delay(100).show().fadeSlideIn();
 	    tour(index);
 	    t.addClass('clicked').siblings().removeClass('clicked');	
 	    var offset = t.position().left + t.width()/2;
 	    var arrow = $('.tour-arrow');
-	    arrow.animate({
+	    arrow.stop().animate({
 		'left': offset - arrow.width() / 2 + 'px'
 	    },600,'easeOutExpo');
 	    
@@ -38,14 +38,16 @@ $(document).ready(function(){
 	    
 	    var fill = $('.filldiv');
 	    var bgUrl = '/assets/bgs/v' + index + '.jpg';
-	    fill.css('opacity',0).css('background-image','url(' + bgUrl + ')').fadeSlideIn(null,null,function(){
-		
+	    body.css('background-image','url(' + bgUrl + ')');
+	    fill.css('opacity',0).css('background-image','url(' + bgUrl + ')').stop().fadeSlideIn(null,null,function(){
 		body.css('background-image','url(' + bgUrl + ')');
+		
 		BV.show('https://s3.amazonaws.com/mantralabs/videos/v' + index + '.mp4', {
 		    altSource:'vids/river.ogv'
-		});		
-		fill.delay(500).animate({'opacity':0},500,null,function(){
-		    window.blockTourSlide = false;	    
+		});
+		setTimeout(function(){window.blockTourSlide = false;},200);
+		fill.stop().delay(500).animate({'opacity':0},300,null,function(){
+		        
 		});
 		
 	    });	    

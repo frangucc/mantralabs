@@ -6,7 +6,8 @@
   <%= javascript_include_tag "application" %>
   <%= yield :javascript_includes %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>  
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>
+
 </head>
 <body class="backgrounds" style="background-image: url(assets/bgs/<%= "#{@body_class}".strip %>.jpg);">
    <!-- <div id="bgfader"></div>

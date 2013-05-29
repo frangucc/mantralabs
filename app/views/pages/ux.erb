@@ -99,7 +99,20 @@ if ( right.nextOrFirst().hasClass('slide-with-video') ) {
 	
 	//$(window).resize();
 	$('.ux-vid').vCenter();
+	
+	
+	
+	
     });
+    
+ 	//keyboard support (left/right arrow nav)
+	$(document).keyup(function(e){			
+
+	    if(e.keyCode == 39 || e.keyCode == 40) {
+		$('.ux-next').trigger('click');
+	    }
+	});   
+    
 })    
 </script>
     

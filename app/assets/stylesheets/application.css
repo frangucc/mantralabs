@@ -281,6 +281,7 @@ em {
 }
 .ux-vid {
     width: 90%;
+    max-height: 80%;
     margin: auto;
     
 }
@@ -489,6 +490,7 @@ h4,.h5 {
 }
 .ux-slide-right {
     background-color: #ddd;
+    margin-top: 52px;
     position: absolute;
     width: 100%;    
     z-index: 10;

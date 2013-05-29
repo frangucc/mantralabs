@@ -115,14 +115,17 @@ t.resize(function(){alert('d');})
 	
     }
     
-    $.fn.vCenter = function() {
+    $.fn.vCenter = function(minus) {
+	var minus = minus || 0;
 	var t = $(this);
 	var p = t.parent();
-	var marg = (p.height() - t.height()) / 2;	 
+	var marg = ((p.height() - t.height()) / 2);	 
 	t.css('margin-top',marg);
 	$(window).resize(function(){	    
-	    var marg = (p.height() - t.height()) / 2;	 
-	    t.css('margin-top',marg);
+	    setTimeout(function(){
+                var marg = (p.height() - t.height()) / 2;	 
+	        t.css('margin-top',marg);		
+	    },200);
 	});
 	return $(this);
     }
@@ -161,7 +164,7 @@ t.resize(function(){alert('d');})
 	
     });
     
-    $('.ux-vid').vCenter();
+    $('.ux-vid').vCenter(52);
     
     $(window).load(function(){
 	$(window).resize();

@@ -15,10 +15,7 @@ $(document).ready(function(){
 	
 
 	
-	$('.tour-menu td.tour-nav-title').click(function(){	    
-	    if ( $('.tour-arrow:animated,#bgfader:animated,#bgfader2:animated').length ) {
-		return;
-	    }
+	$('.tour-menu td.tour-nav-title').click(function(){
 	    if ( window.blockTourSlide ) {
 		return;
 	    }

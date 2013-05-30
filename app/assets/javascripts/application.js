@@ -100,7 +100,7 @@
 		var t = $(this);
 		var ratio = t.attr('ratio');
 		t.attr('ratio',ratio);
-t.css('width','');		
+		t.css('width','');		
 		t.height(t.width()/ratio);
 		t.width(t.height()*ratio);		
 	    })	    
@@ -129,6 +129,32 @@ t.css('width','');
 	    },200);
 	});
 	return $(this);
+    }
+    
+    $.fn.sliding = function(nav,slides) {
+	
+	return $(this).each(function(){
+	    var t = $(this);
+	    var n = $('.' + nav,t);
+	    var s = $('.' + slides,t);
+	
+	    n.eq(0).addClass('active');
+	    s.eq(0).addClass('active');
+	
+	    n.click(function(){
+		n.removeClass('active');
+		$(this).addClass('active');		
+		var index = $('.' + nav,t).index(this);
+		
+		s.filter(function(){return $(this).hasClass('active')}).stop().animate({opacity:0});	
+		
+		s.removeClass('active');
+		
+		s.eq(index).addClass('active').stop().animate({opacity:1});		
+	    });
+	    n.trigger('click').eq(0).trigger('click');
+	})
+
     }
     
     

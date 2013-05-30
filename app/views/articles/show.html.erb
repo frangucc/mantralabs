@@ -1,6 +1,18 @@
-<div><%= @article.title %></div>
-<div><%= @article.sub_title %></div>
 
-<div><%= @article.content %></div>
-<div><%= @article.html.html_safe %></div>
-<div><%= image_tag @article.picture.url %></div>
+<div class="row b-limit-top">
+
+
+    <div class="large-8 columns m-limit-top">
+	<h1 class="blue-noise-bg inline-inline"><%= @article.title %></em></h1>
+	<br />
+
+
+    </div>
+    <div class="large-8 columns left m-limit-top">
+    	<%= image_tag @article.picture.url %><br />
+	<p class="h3 oxygen"><%= @article.content %><br /><br /><%= @article.html.html_safe %></p>
+    </div>
+</div>
+
+
+

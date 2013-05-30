@@ -100,8 +100,9 @@
 		var t = $(this);
 		var ratio = t.attr('ratio');
 		t.attr('ratio',ratio);
+		t.css('width','');		
 		t.height(t.width()/ratio);
-t.resize(function(){alert('d');})		
+		t.width(t.height()*ratio);		
 	    })	    
 	}
 	setRatio();
@@ -123,17 +124,64 @@ t.resize(function(){alert('d');})
 	t.css('margin-top',marg);
 	$(window).resize(function(){	    
 	    setTimeout(function(){
-                var marg = (p.height() - t.height()) / 2;	 
-	        t.css('margin-top',marg);		
+		var marg = (p.height() - t.height()) / 2;	 
+		t.css('margin-top',marg);		
 	    },200);
 	});
 	return $(this);
     }
     
+    $.fn.sliding = function(nav,slides,time) {
+	time = time || 5000;
+	return $(this).each(function(){
+	    var t = $(this);
+	    var n = $('.' + nav,t);
+	    var s = $('.' + slides,t);
+	
+	    n.eq(0).addClass('active');
+	    s.eq(0).addClass('active');
+	    
+	    s.css('opacity',0).filter(function(){
+		return $(this).hasClass('active')
+		}).css('opacity',1);
+	
+	    var interval = setInterval(function(){
+		n.filter(function(){
+		    return $(this).hasClass('active')
+		    }).nextOrFirst('.' + nav,t).trigger('click');
+	    },time);
+	
+	    n.click(function(){
+		n.removeClass('active');
+		$(this).addClass('active');		
+		var index = $('.' + nav,t).index(this);
+		
+		s.filter(function(){return $(this).hasClass('active')}).stop().animate({opacity:0},500,'easeInOutExpo');	
+		
+		s.removeClass('active');
+		
+		s.eq(index).addClass('active').stop().animate({
+		    opacity:1
+		},500,'easeInOutExpo');
+
+		clearInterval(interval);
+		interval = setInterval(function(){
+		    n.filter(function(){
+			return $(this).hasClass('active')
+			}).nextOrFirst('.' + nav,t).trigger('click');
+		},time);		
+	    });
+	    
+	    
+	//n.trigger('click').eq(0).trigger('click');
+	})
+
+    }
+    
     
     $(document).ready(function(){
  
-        $('.strethdown,.ux-slide-right').strethDown(0);
+	$('.strethdown,.ux-slide-right').strethDown(0);
 
 	$('#a-offerings').hoverIntent(function(){
 	    $('.offerings').stop().animate({
@@ -151,7 +199,7 @@ t.resize(function(){alert('d');})
 	    },400,'easeInOutExpo').removeClass('opened');
 	});
 	$('body').click(function(){
-              $('.offerings,#a-offerings').trigger('mouseleave');
+	    $('.offerings,#a-offerings').trigger('mouseleave');
 	})
 	$('.offerings,#a-offerings').click(function(e){
 	    e.stopPropagation();

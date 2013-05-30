@@ -144,16 +144,16 @@ em {
 }
 .circle {
     border-radius: 1000px;
-    opacity: 0.6 !important;   
+    opacity: 0.4 !important;   
     cursor: pointer;
 }
 .circle.active {
     opacity: 1 !important;
 }
 .circle.small {
-    width: 17px;
-    height: 17px;
-    margin: 3px;
+    width: 23px;
+    height: 23px;
+    margin: 5px;
 }
 .img-slider-nav {
     position: absolute;
@@ -278,7 +278,7 @@ em {
     background: rgba(0,0,0,0.95);
 
     right: 0;
-    top: 80px;
+    top: 20px;
     padding: 10px 20px 10px 20px;
     color: #fff;
     z-index: 5;
@@ -287,6 +287,7 @@ em {
 .ux-vid {
     width: 90%;
     max-height: 80%;
+    max-width:90%;
     margin: auto;
     
 }
@@ -490,13 +491,15 @@ h4,.h5 {
     position: absolute;
     width: 90%;
     opacity: 0;
+    background-color: #fff;
     display: none;
     
 }
 .ux-slide-right {
-    background-color: #ddd;
-    margin-top: 52px;
+    background-color: #ddd;    
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;    
     z-index: 10;
 }
@@ -506,7 +509,17 @@ h4,.h5 {
 .ux-slide-right.last {
     z-index: 11;
 }
-
+.ux-container {
+    margin-top:52px;
+}
+.ux-slider-single {
+    opacity: 0;
+    z-index: 5;
+}
+.ux-slider-single {
+    opacity: 1;
+    z-index: 6;
+}
 .work-single-header {
     background: none !important;
     height: 420px;
@@ -728,12 +741,17 @@ table.menu tr td {
 ::-webkit-scrollbar-thumb {-webkit-border-radius: 0px;border-radius: 0px;background: #777;}
 ::-webkit-scrollbar-thumb:window-inactive {background: #333;}
 
+* {
+    zoom: 1;
+}
 @media only screen and (max-width: 48em) {
 
     .small-static {
 	position: static !important;
     }
-
+    .small-no-limit-top {
+	margin-top: 0 !important;
+    }
 
     #videoTag{
 	position: absolute;

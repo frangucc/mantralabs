@@ -3,7 +3,7 @@
 //= require jquery.easing.1.3
 
 
-//= require jquery-ui-1.8.22.custom.min
+//= require jquery-ui
 //= require jquery.imagesloaded.min
 //= require jquery.scrollTo
 //= require jquery.easing.1.3

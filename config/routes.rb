@@ -2,6 +2,8 @@ Homepage::Application.routes.draw do
 
   root :to => 'pages#index'
 
+  resources :articles
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 

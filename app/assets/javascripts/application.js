@@ -156,17 +156,13 @@
 		$(this).addClass('active');		
 		var index = $('.' + nav,t).index(this);
 		
-		s.filter(function(){
-		    return $(this).hasClass('active')
-		    }).stop().animate({
-		    opacity:0
-		});	
+		s.filter(function(){return $(this).hasClass('active')}).stop().animate({opacity:0},500,'easeInOutExpo');	
 		
 		s.removeClass('active');
 		
 		s.eq(index).addClass('active').stop().animate({
 		    opacity:1
-		});
+		},500,'easeInOutExpo');
 
 		clearInterval(interval);
 		interval = setInterval(function(){

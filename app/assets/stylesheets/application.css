@@ -79,12 +79,17 @@ a:visited {
 
 }
 
+
 a,a:visited {
     color: inherit;
 }
-a.blue-hover:hover {
+a:hover, a.blue-hover:hover {
     text-decoration:underline;
     color:#2a71c2;
+}
+
+a.whitelinks:hover {
+    color:white;
 }
 
 em {

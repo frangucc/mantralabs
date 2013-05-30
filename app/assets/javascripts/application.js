@@ -100,8 +100,9 @@
 		var t = $(this);
 		var ratio = t.attr('ratio');
 		t.attr('ratio',ratio);
+t.css('width','');		
 		t.height(t.width()/ratio);
-t.resize(function(){alert('d');})		
+		t.width(t.height()*ratio);		
 	    })	    
 	}
 	setRatio();
@@ -123,8 +124,8 @@ t.resize(function(){alert('d');})
 	t.css('margin-top',marg);
 	$(window).resize(function(){	    
 	    setTimeout(function(){
-                var marg = (p.height() - t.height()) / 2;	 
-	        t.css('margin-top',marg);		
+		var marg = (p.height() - t.height()) / 2;	 
+		t.css('margin-top',marg);		
 	    },200);
 	});
 	return $(this);
@@ -133,7 +134,7 @@ t.resize(function(){alert('d');})
     
     $(document).ready(function(){
  
-        $('.strethdown,.ux-slide-right').strethDown(0);
+	$('.strethdown,.ux-slide-right').strethDown(0);
 
 	$('#a-offerings').hoverIntent(function(){
 	    $('.offerings').stop().animate({
@@ -151,7 +152,7 @@ t.resize(function(){alert('d');})
 	    },400,'easeInOutExpo').removeClass('opened');
 	});
 	$('body').click(function(){
-              $('.offerings,#a-offerings').trigger('mouseleave');
+	    $('.offerings,#a-offerings').trigger('mouseleave');
 	})
 	$('.offerings,#a-offerings').click(function(e){
 	    e.stopPropagation();

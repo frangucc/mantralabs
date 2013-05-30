@@ -19,10 +19,11 @@ $(document).ready(function(){
 	    if ( window.blockTourSlide ) {
 		return;
 	    }
-            window.blockTourSlide = true;	    
+            window.blockTourSlide = true;	
+	    clearTimeout(window.slideTO);
 	    var t = $(this);
 	    var index = $('.tour-menu td.tour-nav-title').index(this) + 1;
-	    $('.tour-single-slogan').hide().eq(index).stop().delay(100).show().fadeSlideIn();
+	    $('.tour-single-slogan').hide().eq(index).stop().delay(300).show().fadeSlideIn();
 	    tour(index);
 	    t.addClass('clicked').siblings().removeClass('clicked');	
 	    var offset = t.position().left + t.width()/2;
@@ -35,15 +36,18 @@ $(document).ready(function(){
 	    
 	    var fill = $('.filldiv');
 	    var bgUrl = '/assets/bgs/v' + index + '.jpg';
-	    body.css('background-image','url(' + bgUrl + ')');
+	    //body.css('background-image','url(' + bgUrl + ')');
 	    fill.css('opacity',0).css('background-image','url(' + bgUrl + ')').stop().fadeSlideIn(null,null,function(){
 		body.css('background-image','url(' + bgUrl + ')');
 		
 		BV.show('https://s3.amazonaws.com/mantralabs/videos/v' + index + '.mp4', {
 		    altSource:'vids/river.ogv'
 		});
-		setTimeout(function(){window.blockTourSlide = false;},200);
-		fill.stop().delay(500).animate({'opacity':0},300,null,function(){
+		setTimeout(function(){window.blockTourSlide = false;},100);
+		window.slideTO = setTimeout(function(){
+		    fill.stop().delay(500).animate({'opacity':0},300,null,function(){
+		},500);
+		
 		        
 		});
 		

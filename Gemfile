@@ -13,6 +13,8 @@ gem 'json'
 
 gem 'activeadmin'
 
+gem "paperclip", "~> 3.0"
+
 gem "meta_search",    '>= 1.1.0.pre'
 
 # Gems used only for assets and not required

@@ -106,10 +106,36 @@
 	    //$(window).resize();
 	    $('.ux-vid').vCenter();
 	
-	
-	
-	
 	});
+	
+	var uxPrev = function(){
+	    var left = $('.ux-slide-left.active');
+	    var right = $('.ux-slide-right.active');
+
+	    if ( right.prevOrLast().hasClass('slide-with-video') ) {
+		$('.ux-left').removeClass('large-6').addClass('large-4');
+		$('.ux-right').removeClass('large-6').addClass('large-8');
+    
+	    } else {
+		$('.ux-left').removeClass('large-4').addClass('large-6');
+		$('.ux-right').removeClass('large-8').addClass('large-6');    
+	    }
+	
+	    $('.ux-slide-left.last').removeClass('last')
+	    left.addClass('last').removeClass('active').prevOrLast('.ux-slide-left').addClass('active');
+	
+	
+	    $('.ux-slide-right.last').removeClass('last')
+	    right.addClass('last').removeClass('active').prevOrLast('.ux-slide-right').addClass('active');
+	
+	
+	    $('.ux-slide-left.active').cascade();	
+	    $('.ux-slide-right.active').delay(200).fadeSlideIn();
+	
+	    //$(window).resize();
+	    $('.ux-vid').vCenter();	    
+	    
+	}
     
 	//keyboard support (left/right arrow nav)
 	$(document).keyup(function(e){			
@@ -117,6 +143,10 @@
 	    if(e.keyCode == 39 || e.keyCode == 40) {
 		$('.ux-next').trigger('click');
 	    }
+	    if(e.keyCode == 37 || e.keyCode == 38) {		
+		uxPrev();
+	    }
+	    	    
 	});  
 	
 	

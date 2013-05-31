@@ -156,13 +156,13 @@
 		$(this).addClass('active');		
 		var index = $('.' + nav,t).index(this);
 		
-		s.filter(function(){return $(this).hasClass('active')}).stop().animate({opacity:0},500,'easeInOutExpo');	
+		s.filter(function(){return $(this).hasClass('active')}).stop().animate({opacity:0},800,'easeInOutExpo');	
 		
 		s.removeClass('active');
 		
 		s.eq(index).addClass('active').stop().animate({
 		    opacity:1
-		},500,'easeInOutExpo');
+		},800,'easeInOutExpo');
 
 		clearInterval(interval);
 		interval = setInterval(function(){
@@ -182,7 +182,7 @@
     $(document).ready(function(){
  
 	$('.strethdown,.ux-slide-right').strethDown(0);
-
+        $('.cascade-container').cascade();
 	$('#a-offerings').hoverIntent(function(){
 	    $('.offerings').stop().animate({
 		top:'52px'

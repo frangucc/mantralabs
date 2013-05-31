@@ -1,3 +1,24 @@
+
+<div class="row b-limit-top">
+
+
+    <div class="large-8 columns m-limit-top">
+	<h1 class="blue-noise-bg inline-inline"><%= @article.title %></em></h1>
+	<br />
+
+
+    </div>
+    <div class="large-8 columns left m-limit-top">
+    	<%= image_tag @article.picture.url %><br />
+	<p class="h3 oxygen"><%= @article.content %><br /><br /><%= @article.html.html_safe %></p>
+    </div>
+
+<div style="margin-top:40px;margin-left:13px;" class="fb-comments" data-href="<%= request.url %>" data-width="660" data-num-posts="10"></div>
+
+</div>
+
+
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -8,11 +29,5 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-<div><%= @article.title %></div>
-<div><%= @article.sub_title %></div>
 
-<div><%= @article.content %></div>
-<div><%= @article.html.html_safe %></div>
-<div><%= image_tag @article.picture.url %></div>
 
-<div class="fb-comments" data-href="<%= request.url %>" data-width="470" data-num-posts="10"></div>

@@ -5,5 +5,6 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@body_class = 'show_bg'
 	end
 end

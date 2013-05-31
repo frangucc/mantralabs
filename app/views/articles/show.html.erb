@@ -12,6 +12,9 @@
     	<%= image_tag @article.picture.url %><br />
 	<p class="h3 oxygen"><%= @article.content %><br /><br /><%= @article.html.html_safe %></p>
     </div>
+
+<div style="margin-top:40px;margin-left:13px;" class="fb-comments" data-href="<%= request.url %>" data-width="660" data-num-posts="10"></div>
+
 </div>
 
 
@@ -27,6 +30,4 @@
 
 
 
-
-<div class="fb-comments" data-href="<%= request.url %>" data-width="470" data-num-posts="10"></div>
 

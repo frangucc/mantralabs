@@ -57,6 +57,10 @@ body {
 .home_bg {
     background-image: url(bgs/3.jpg);
 }
+.show_bg {
+    background-image: url(assets/bgs/works_bg.jpg);
+
+}
 .works {
     background-image: url(bgs/works_bg.jpg);
 
@@ -79,12 +83,17 @@ a:visited {
 
 }
 
+
 a,a:visited {
     color: inherit;
 }
-a.blue-hover:hover {
+a:hover, a.blue-hover:hover {
     text-decoration:underline;
     color:#2a71c2;
+}
+
+a.whitelinks:hover {
+    color:white;
 }
 
 em {
@@ -182,6 +191,11 @@ em {
 .work-single img {
     width:100%;
     height: auto;
+}
+
+.go-back {
+    padding-top:4px;
+    font-size:12px !important;
 }
 
 #topbar nav ul li img {
@@ -472,6 +486,7 @@ h4,.h5 {
 
     width: 90%;
     opacity: 1;
+    padding:0 0px 0 20px;
     
 }
 .ux-slide-right.active {
@@ -491,7 +506,7 @@ h4,.h5 {
     
 }
 .ux-slide-right {
-    background-color: #ddd;    
+    background-color: #000;    
     position: absolute;
     top: 0;
     left: 0;

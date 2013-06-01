@@ -28,7 +28,7 @@
 			video = $(''),
 			mediaAspect = 16/9,
 			vidDur = 0,
-			defaultVolume = 0.8,
+			defaultVolume = 0,
 			isInitialized = false,
 			isSeeking = false,
 			isPlaying = false,

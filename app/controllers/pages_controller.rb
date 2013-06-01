@@ -66,6 +66,14 @@ class PagesController < ApplicationController
    def ux
    end
 
+   def ux_research
+
+   end
+
+   def ux_design
+
+   end
+
 
 
 

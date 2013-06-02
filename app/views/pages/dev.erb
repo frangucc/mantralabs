@@ -1,0 +1,133 @@
+<div class="row fullwidth ux-container small-no-limit-top">
+    <div class="large-6 size-animation columns strethdown ovfh small-height-auto  ovfa ux-left">
+	<div class="ux-next h3">NEXT</div>
+	<div class="s-limit-top">
+	    <div class="backarrow vmiddle"></div>
+	    <div class="h4 inline vmiddle go-back oxygen"><a href="/">GO BACK</a></div>
+	</div>
+
+	<!----------------------------------!-->
+
+	<div class="ux-slide-left active ">
+	    <div class="h1 gray-mark inline s-padding m-limit-top">Welcome to MantraDev</div>
+	    <div class="h2 georgia s-limit-top">MantraDev is a tight knit product development team that can handle the most challenging technical problems.</div>
+	    <p class="oxygen m-limit m-limit-top h4">
+	    	Together, we've built dozens of complex web and mobile applications for the consumer web and enterprise. We build future-proof products for entrepenours and established brands.
+	    </p>
+
+	</div>
+	<div class="ux-slide-left ">
+	    <div class="h1 gray-mark inline s-padding m-limit-top">Recent Projects</div>
+	    <div class="h2 georgia s-limit-top">Below are projects we've taken from concept to profit:</div>
+	    <p class="oxygen m-limit m-limit-top h4">
+
+	    	<ul class="oxygen h4" style="font-size:14px;margin-top:-15px;">
+				<li><a href="#">Monthlys - Web</a></li>
+				<li><a href="#">SellSimple - Web, iOS</a></li>
+				<li><a href="#">Tagkast - Web, Android Tablet</a></li>
+				<li><a href="#">BodyShopBids - Web</a></li>
+				<li><a href="#">Chicago Ideas Week - Web</a></li>
+				<li><a href="#">BenchPrep - Web, Mobile</a></li>
+				<li><a href="#">AgentRun - Web, Mobile</a></li>
+				<li><a href="#">GreenBeans - Web, iOS</a></li>
+				<li><a href="#">Bright Future - Web, iOS, Android</a></li>
+				<li><a href="#">Obaz - iOS</a></li>
+			</ul>
+	    </p>
+	</div>
+	<div class="ux-slide-left ">
+	    <div class="h1 gray-mark inline s-padding m-limit-top">Experience</div>
+	    <div class="h2 georgia s-limit-top">16 heads, 110 years combined experience, 28 programming languages, 117 projects, 21 large scale enterprise applications, 14 broken MacBook Pros, 100,000+ Redbulls and 30,000 ping pong matches later. </div>
+	    <p class="oxygen m-limit m-limit-top h4">Our clients leverage our experience to their benefit. Both executioners and thought leaders, MantraDev hackers are known for their instincts and approach.</p>
+	</div>
+	<div class="ux-slide-left ">
+	    <div class="h1 gray-mark inline s-padding m-limit-top">Open Source</div>
+	    <div class="h2 georgia s-limit-top">We love Open Source projects like Ruby on Rails, Node.js and Backbone. We also love contributing back to open source.</div>
+	    <p class="oxygen m-limit m-limit-top h4">Here are some of our favorite projects, frameworks and technologies:
+	    	<img src="/assets/ux/opensource.png"/>
+
+	    </p>
+
+	</div>
+
+
+    </div>
+
+
+
+    <div class="large-6 size-animation columns ux-right strethdown ovfh no-padding-left left">
+
+	<div class="ux-slide-right active ux-slider">
+	    <div class="img-slider-nav">
+	    </div>
+	    <div class="absfill ux-slider-single" style="background-image: url(assets/ux/hacker3.jpg);"></div>
+	</div>
+
+	<div class="ux-slide-right">
+	    <div class="absfill" style="background-image: url(assets/ux/job-monthlys.jpg);"></div>	    
+	</div>	
+	<div class="ux-slide-right">
+	    <div class="absfill" style="background-image: url(assets/ux/usability5.jpg);"></div>	    
+	</div>	
+	<div class="ux-slide-right">
+	    <div class="absfill" style="background-image: url(assets/ux/mantra-os.jpg);"></div>	    
+	</div>
+	
+
+
+</div>
+<style>
+    #rightbar {display: none !important;}
+</style>
+<script>
+    $(document).ready(function(){
+	$('.ux-slide-left.active').cascade();	
+	$('.ux-next').click(function(){	
+	
+	    var left = $('.ux-slide-left.active');
+	    var right = $('.ux-slide-right.active');
+
+	    if ( right.nextOrFirst().hasClass('slide-with-video') ) {
+		$('.ux-left').removeClass('large-6').addClass('large-4');
+		$('.ux-right').removeClass('large-6').addClass('large-8');
+    
+	    } else {
+		$('.ux-left').removeClass('large-4').addClass('large-6');
+		$('.ux-right').removeClass('large-8').addClass('large-6');    
+	    }
+	
+	    $('.ux-slide-left.last').removeClass('last')
+	    left.addClass('last').removeClass('active').nextOrFirst('.ux-slide-left').addClass('active');
+	
+	
+	    $('.ux-slide-right.last').removeClass('last')
+	    right.addClass('last').removeClass('active').nextOrFirst('.ux-slide-right').addClass('active');
+	
+	
+	    $('.ux-slide-left.active').cascade();	
+	    $('.ux-slide-right.active').delay(200).fadeSlideIn();
+	
+	    //$(window).resize();
+	    $('.ux-vid').vCenter();
+	
+	
+	
+	
+	});
+    
+	//keyboard support (left/right arrow nav)
+	$(document).keyup(function(e){			
+
+	    if(e.keyCode == 39 || e.keyCode == 40) {
+		$('.ux-next').trigger('click');
+	    }
+	});  
+	
+	
+	$('.ux-slider').sliding('circle','ux-slider-single');
+    
+    })    
+</script>
+
+
+

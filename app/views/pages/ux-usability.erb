@@ -1,0 +1,129 @@
+<div class="row fullwidth ux-container small-no-limit-top">
+    <div class="large-6 size-animation columns strethdown ovfh small-height-auto  ovfa ux-left">
+	<div class="ux-next h3">NEXT</div>
+	<div class="s-limit-top">
+	    <div class="backarrow vmiddle"></div>
+	    <div class="h4 inline vmiddle go-back oxygen"><a href="/">GO BACK</a></div>
+	</div>
+
+	<!----------------------------------!-->
+
+	<div class="ux-slide-left active ">
+	    <div class="h1 gray-mark inline s-padding m-limit-top">Usability</div>
+	    <div class="h2 georgia s-limit-top">People have to be able to grasp the functioning of the site immediately after scanning the home page—for a few seconds at most.</div>
+	    <p class="oxygen m-limit m-limit-top h4">
+	    	We aim to make tools easier to use and more effective for work or everyday living. We benefit from practicing usability and developing UX guidelines.<br /></br />
+	    </p>
+
+	</div>
+	<div class="ux-slide-left ">
+	    <div class="h1 gray-mark inline s-padding m-limit-top">Inspection Methods</div>
+	    <div class="h2 georgia s-limit-top">Inspection methods are quick and quantitative. They help Mantra discover patterns in users attitudes, motivations and barriers.</div>
+	    <p class="oxygen m-limit m-limit-top h4">These usability evaluation methods involve observation of users by an experimenter, or the testing and evaluation of a program by an expert reviewer. They provide more quantitative data as tasks can be timed and recorded.</p>
+	</div>
+	<div class="ux-slide-left ">
+	    <div class="h1 gray-mark inline s-padding m-limit-top">Inquiry Methods</div>
+	    <div class="h2 georgia s-limit-top">Inquiries provide valuable information on what the user wants.</div>
+	    <p class="oxygen m-limit m-limit-top h4">Task analysis, focus groups and surveys help us understand users' goals and their prefered ways of working.</p>
+	</div>
+	<div class="ux-slide-left ">
+	    <div class="h1 gray-mark inline s-padding m-limit-top">Prototyping Methods</div>
+	    <div class="h2 georgia s-limit-top">Rapid prototyping is a method used in early stages of development to validate and refine the usability of a system.</div>
+	    <p class="oxygen m-limit m-limit-top h4">It can be used to quickly and cheaply evaluate user-interface designs without the need for an expensive working model. This can help remove hesitation to change the design, since it is implemented before any real programming begins. One such method of rapid prototyping is paper prototyping.</p>
+	</div>
+	<div class="ux-slide-left ">
+	    <div class="h1 gray-mark inline s-padding m-limit-top">Testing Methods</div>
+	    <div class="h2 georgia s-limit-top">These usability evaluation methods involve testing of subjects for the most quantitative data.</div>
+	    <p class="oxygen m-limit m-limit-top h4">As everything comes together, our user interfaces are supplied with content, photography, workflows and guidelines for producing epic finished designs.</p>
+	</div>
+
+    </div>
+
+
+
+    <div class="large-6 size-animation columns ux-right strethdown ovfh no-padding-left left">
+
+	<div class="ux-slide-right active ux-slider">
+	    <div class="img-slider-nav">
+		<div class="circle small white-bg inline"></div>
+		<div class="circle small white-bg inline"></div>
+		<div class="circle small white-bg inline"></div>		
+	    </div>
+	    <div class="absfill ux-slider-single" style="background-image: url(assets/ux/usability.jpg);"></div>
+	    <div class="absfill ux-slider-single" style="background-image: url(assets/ux/usability.jpg);"></div>
+	    <div class="absfill ux-slider-single" style="background-image: url(assets/ux/usability.jpg);"></div>
+	</div>
+	<div class="ux-slide-right">
+	    <div class="absfill" style="background-image: url(assets/ux/usability4.jpg);"></div>	    
+	</div>	
+	<div class="ux-slide-right">
+	    <div class="absfill" style="background-image: url(assets/ux/usability5.jpg);"></div>	    
+	</div>	
+	<div class="ux-slide-right">
+	    <div class="absfill" style="background-image: url(assets/ux/usability6.jpg);"></div>	    
+	</div>
+	
+	<div class="ux-slide-right">
+	    <div class="absfill" style="background-image: url(assets/ux/red.jpg);"></div>	    
+	</div>
+	<div class="ux-slide-right">
+	    <div class="absfill" style="background-image: url(assets/ux/boards.jpg);"></div>	    
+	</div>
+
+
+</div>
+<style>
+    #rightbar {display: none !important;}
+</style>
+<script>
+    $(document).ready(function(){
+	$('.ux-slide-left.active').cascade();	
+	$('.ux-next').click(function(){	
+	
+	    var left = $('.ux-slide-left.active');
+	    var right = $('.ux-slide-right.active');
+
+	    if ( right.nextOrFirst().hasClass('slide-with-video') ) {
+		$('.ux-left').removeClass('large-6').addClass('large-4');
+		$('.ux-right').removeClass('large-6').addClass('large-8');
+    
+	    } else {
+		$('.ux-left').removeClass('large-4').addClass('large-6');
+		$('.ux-right').removeClass('large-8').addClass('large-6');    
+	    }
+	
+	    $('.ux-slide-left.last').removeClass('last')
+	    left.addClass('last').removeClass('active').nextOrFirst('.ux-slide-left').addClass('active');
+	
+	
+	    $('.ux-slide-right.last').removeClass('last')
+	    right.addClass('last').removeClass('active').nextOrFirst('.ux-slide-right').addClass('active');
+	
+	
+	    $('.ux-slide-left.active').cascade();	
+	    $('.ux-slide-right.active').delay(200).fadeSlideIn();
+	
+	    //$(window).resize();
+	    $('.ux-vid').vCenter();
+	
+	
+	
+	
+	});
+    
+	//keyboard support (left/right arrow nav)
+	$(document).keyup(function(e){			
+
+	    if(e.keyCode == 39 || e.keyCode == 40) {
+		$('.ux-next').trigger('click');
+	    }
+	});  
+	
+	
+	$('.ux-slider').sliding('circle','ux-slider-single');
+    
+    })    
+</script>
+
+
+

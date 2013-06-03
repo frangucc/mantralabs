@@ -1,0 +1,92 @@
+<div class="row fullwidth ux-container small-no-limit-top">
+    <div class="large-6 size-animation columns strethdown ovfh small-height-auto  ovfa ux-left">
+	
+	<div class="s-limit-top">
+	    <div class="backarrow vmiddle"></div>
+	    <div class="h4 inline vmiddle go-back oxygen"><a href="/">GO BACK</a></div>
+	</div>
+
+	<!----------------------------------!-->
+
+	<div class="ux-slide-left active ">
+	    <div class="h1 gray-mark inline s-padding m-limit-top">Your idea, all our resources</div>
+	    <div class="h2 georgia s-limit-top">MantraDev incubation gives emerging companies access to our entire team and resources.</div>
+	    <p class="oxygen m-limit m-limit-top h4">
+	    	Cut your time to market in half, cut your time to profitability in a third. Team up with Mantra to get your project off the ground by partnering with us. Work with us in-house, at our offices and subject your startup to the resources and culture responsible for taking dozens of products to market. 
+	    </p>
+
+	</div>
+
+
+
+    </div>
+
+
+
+    <div class="large-6 size-animation columns ux-right strethdown ovfh no-padding-left left">
+
+	<div class="ux-slide-right active ux-slider">
+	    <div class="img-slider-nav">
+	    </div>
+	    <div class="absfill ux-slider-single" style="background-image: url(assets/ux/incubate.jpg);"></div>
+	</div>
+
+
+
+
+</div>
+<style>
+    #rightbar {display: none !important;}
+</style>
+<script>
+    $(document).ready(function(){
+	$('.ux-slide-left.active').cascade();	
+	$('.ux-next').click(function(){	
+	
+	    var left = $('.ux-slide-left.active');
+	    var right = $('.ux-slide-right.active');
+
+	    if ( right.nextOrFirst().hasClass('slide-with-video') ) {
+		$('.ux-left').removeClass('large-6').addClass('large-4');
+		$('.ux-right').removeClass('large-6').addClass('large-8');
+    
+	    } else {
+		$('.ux-left').removeClass('large-4').addClass('large-6');
+		$('.ux-right').removeClass('large-8').addClass('large-6');    
+	    }
+	
+	    $('.ux-slide-left.last').removeClass('last')
+	    left.addClass('last').removeClass('active').nextOrFirst('.ux-slide-left').addClass('active');
+	
+	
+	    $('.ux-slide-right.last').removeClass('last')
+	    right.addClass('last').removeClass('active').nextOrFirst('.ux-slide-right').addClass('active');
+	
+	
+	    $('.ux-slide-left.active').cascade();	
+	    $('.ux-slide-right.active').delay(200).fadeSlideIn();
+	
+	    //$(window).resize();
+	    $('.ux-vid').vCenter();
+	
+	
+	
+	
+	});
+    
+	//keyboard support (left/right arrow nav)
+	$(document).keyup(function(e){			
+
+	    if(e.keyCode == 39 || e.keyCode == 40) {
+		$('.ux-next').trigger('click');
+	    }
+	});  
+	
+	
+	$('.ux-slider').sliding('circle','ux-slider-single');
+    
+    })    
+</script>
+
+
+

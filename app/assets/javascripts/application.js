@@ -14,7 +14,22 @@
 //= require jquery.hoverIntent.minified
 //= require bigvideo
 
-
+function callPlayer(frame_id, func, args) {
+    if (window.jQuery && frame_id instanceof jQuery) frame_id = frame_id.get(0).id;
+    var iframe = document.getElementById(frame_id);
+    if (iframe && iframe.tagName.toUpperCase() != 'IFRAME') {
+        iframe = iframe.getElementsByTagName('iframe')[0];
+    }
+    if (iframe) {
+        // Frame exists, 
+        iframe.contentWindow.postMessage(JSON.stringify({
+            "event": "command",
+            "func": func,
+            "args": args || [],
+            "id": frame_id
+        }), "*");
+    }
+}
 
 (function($) {
 
@@ -145,12 +160,12 @@
 	    
 	    s.css('opacity',0).filter(function(){
 		return $(this).hasClass('active')
-		}).css('opacity',1);
+	    }).css('opacity',1);
 	
 	    var interval = setInterval(function(){
 		n.filter(function(){
 		    return $(this).hasClass('active')
-		    }).nextOrFirst('.' + nav,t).trigger('click');
+		}).nextOrFirst('.' + nav,t).trigger('click');
 	    },time);
 	
 	    n.click(function(){
@@ -158,7 +173,11 @@
 		$(this).addClass('active');		
 		var index = $('.' + nav,t).index(this);
 		
-		s.filter(function(){return $(this).hasClass('active')}).stop().animate({opacity:0},800,'easeInOutExpo');	
+		s.filter(function(){
+		    return $(this).hasClass('active')
+		    }).stop().animate({
+		    opacity:0
+		},800,'easeInOutExpo');	
 		
 		s.removeClass('active');
 		
@@ -170,7 +189,7 @@
 		interval = setInterval(function(){
 		    n.filter(function(){
 			return $(this).hasClass('active')
-			}).nextOrFirst('.' + nav,t).trigger('click');
+		    }).nextOrFirst('.' + nav,t).trigger('click');
 		},time);		
 	    });
 	    
@@ -182,9 +201,9 @@
     
     
     $(document).ready(function(){
- 
+
 	$('.strethdown,.ux-slide-right').strethDown(0);
-        $('.cascade-container').cascade();
+	$('.cascade-container').cascade();
 	$('#a-offerings').hoverIntent(function(){
 	    $('.offerings').stop().animate({
 		top:'52px'
@@ -210,7 +229,12 @@
 	$('.embed-vid').fitVids();
 	$.keepRatio({
 	    'ux-vid' : 16/10
-	});	
+	});
+	$('iframe').each(function(i){
+	    $(this).attr('id','yt'+i);
+	})
+
+
 	
     });
     
@@ -222,3 +246,4 @@
 
 
 })(jQuery);
+

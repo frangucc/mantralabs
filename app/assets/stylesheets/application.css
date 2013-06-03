@@ -486,8 +486,26 @@ h4,.h5 {
 
     width: 90%;
     opacity: 1;
-    padding:0 0px 0 20px;
+    padding:0 0px 20px 20px;
     
+}
+
+.fill-vid-button {
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background: url(ui/video-play.png) center no-repeat;
+    background-size: 30%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;    /* FF3.7+ */
+    -o-transition: opacity 0.2s ease-in-out;      /* Opera 10.5 */
+    -webkit-transition: opacity 0.2s ease-in-out; /* Saf3.2+, Chrome */    
+}
+*:hover > .fill-vid-button {
+    display: inherit;
+    opacity: 1;
 }
 .ux-slide-right.active {
     display: block;
@@ -592,7 +610,9 @@ h4,.h5 {
     right: 0;
     top:250px;
 }
-
+.one-third-h {
+    height: 33.3333%;
+}
 #rightbar nav ul {
     text-align: right;
 }

@@ -7,12 +7,24 @@ class PagesController < ApplicationController
    	 @body_class = 'home_bg'
    end
 
+   def application
+   end
+
    def info
 
    end
 
    def video
 
+   end
+
+   def contact
+   end
+
+   def rfp
+   end
+
+   def internship
    end
 	
    def tour

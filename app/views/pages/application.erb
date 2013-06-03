@@ -1,25 +1,4 @@
-<div class="row fullwidth ux-container small-no-limit-top">
-    <div class="large-6 size-animation columns strethdown ovfh small-height-auto  ovfa ux-left">
-	
-	<div class="s-limit-top">
-	    <div class="backarrow vmiddle"></div>
-	    <div class="h4 inline vmiddle go-back oxygen"><a href="/">GO BACK</a></div>
-	</div>
-
-	<!----------------------------------!-->
-
-	<div class="ux-slide-left active ">
-
-	    <div class="h1 gray-mark inline s-padding m-limit-top">Apply to Appcadets</div>
-	    <div class="h2 georgia s-limit-top">Appcadets is a 9 week, full-time training program.</div>
-	    <p class="oxygen m-limit m-limit-top h4">
-	    	Be a guru in 9 weeks.
-	    </p>
-
-	    <div><form method="POST" onsubmit=" return ProcessSmithValid() " id="processSmithForm" action="https://app.process-smith.com/interactions/start/191?client=mantra_web&display=public" enctype="multipart/form-data" class="form-horizontal">
-
-
-	    	
+<div><form method="POST" onsubmit=" return ProcessSmithValid() " id="processSmithForm" action="https://app.process-smith.com/interactions/start/190?client=mantra_web&display=public" enctype="multipart/form-data" class="form-horizontal">
 <div class="control-group">
 <label class="control-label">First name*</label>
 <div class="controls">
@@ -33,21 +12,9 @@
 </div>
 </div>
 <div class="control-group">
-<label class="control-label">Email*</label>
+<label class="control-label">Phone number</label>
 <div class="controls">
-<input value="" type="text" name="email(0-Form)">
-</div>
-</div>
-<div class="control-group">
-<label class="control-label">Interest</label>
-<div class="controls">
-<select name="interest(0-Form)"><option value="Back-end">Back-end</option><option value="Backend">Backend</option></select>
-</div>
-</div>
-<div class="control-group">
-<label class="control-label">Why are you interested in joining the program</label>
-<div class="controls">
-<textarea rows="2" cols="30" name="interest(0-Form)"></textarea>
+<input value="" type="text" name="phone_number(0-Form)">
 </div>
 </div>
 <div class="control-group">
@@ -57,15 +24,15 @@ No file uploaded<input type="file" name="resume(0-Form)">
 </div>
 </div>
 <div class="control-group">
-<label class="control-label">Where are you located</label>
+<label class="control-label">Email*</label>
 <div class="controls">
-<input value="" type="text" name="location(0-Form)">
+<input value="" type="text" name="email(0-Form)">
 </div>
 </div>
 <div class="control-group">
-<label class="control-label">What do you want to do after Appcadets</label>
+<label class="control-label">Start date</label>
 <div class="controls">
-<textarea rows="2" cols="30" name="after(0-Form)"></textarea>
+<input value="" type="text" name="start_date(0-Form)">
 </div>
 </div>
 <div id="psScriptHolder"><script type='text/javascript'>
@@ -84,7 +51,7 @@ No file uploaded<input type="file" name="resume(0-Form)">
                                 alert("You are missing a required field");
                             }
                             return valid;
-                        },function(){ 
+                        },function(){ return true; },function(){ return true; },function(){ 
                             var value = document.getElementsByName("email(0-Form)")[0].value; 
                             var re=/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; 
                             var valid = re.test(value)
@@ -92,7 +59,7 @@ No file uploaded<input type="file" name="resume(0-Form)">
                                 alert("You have an invalid email address");
                             }
                             return valid;
-                        },function(){ return true; },function(){ return true; },function(){ return true; },function(){ return true; },function(){ return true; }];
+                        },function(){ return true; }];
                             for(var i in validateArray){
                                 var retVal= validateArray[i]();
                                 if(!retVal){
@@ -107,31 +74,4 @@ No file uploaded<input type="file" name="resume(0-Form)">
                         
 <input type="hidden" name="outside_form" value="true">
 <div class="control-group"><div class="controls"><input class="btn btn-primary" value="Submit" type="submit"></div></div>
-<input type="hidden" name="message" value="You have applied to be in AppCadet"><input type="hidden" name="redirect_to" value="http://mantra-homepage.herokuapp.com"></form></div>
-
-	</div>
-
-
-
-    </div>
-
-
-
-    <div class="large-6 size-animation columns ux-right strethdown ovfh no-padding-left left">
-
-	<div class="ux-slide-right active ux-slider">
-	    <div class="img-slider-nav">
-	    </div>
-	    <div class="absfill ux-slider-single" style="background-image: url(assets/ux/guru.jpg);"></div>
-	</div>
-
-
-
-
-</div>
-<style>
-    #rightbar {display: none !important;}
-</style>
-
-
-
+<input type="hidden" name="message" value="Thanks for our application"><input type="hidden" name="redirect_to" value="http://mantra-homepage.herokuapp.com/"></form></div>

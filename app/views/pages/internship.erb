@@ -1,0 +1,75 @@
+<div><form method="POST" onsubmit=" return ProcessSmithValid() " id="processSmithForm" action="https://app.process-smith.com/interactions/start/188?client=mantra_web&display=public" enctype="multipart/form-data" class="form-horizontal">
+<div class="control-group">
+<label class="control-label">First name*</label>
+<div class="controls">
+<input value="" type="text" name="first_name(0-Form)">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Last name*</label>
+<div class="controls">
+<input value="" type="text" name="last_name(0-Form)">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Phone number</label>
+<div class="controls">
+<input value="" type="text" name="number(0-Form)">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Email</label>
+<div class="controls">
+<input value="" type="text" name="email(0-Form)">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Resume</label>
+<div class="controls">
+No file uploaded<input type="file" name="resume(0-Form)"> 
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Start date</label>
+<div class="controls">
+<input value="" type="text" name="start_date(0-Form)">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">How did you hear about us</label>
+<div class="controls">
+<textarea rows="2" cols="30" name="hear(0-Form)"></textarea>
+</div>
+</div>
+<div id="psScriptHolder"><script type='text/javascript'>
+                        var ProcessSmithValid = function(){
+                            var validateArray=[function(){ 
+                            var value = document.getElementsByName("first_name(0-Form)")[0].value;
+                            var valid = value.length>0
+                            if(!valid){
+                                alert("You are missing a required field");
+                            }
+                            return valid;
+                        },function(){ 
+                            var value = document.getElementsByName("last_name(0-Form)")[0].value;
+                            var valid = value.length>0
+                            if(!valid){
+                                alert("You are missing a required field");
+                            }
+                            return valid;
+                        },function(){ return true; },function(){ return true; },function(){ return true; },function(){ return true; },function(){ return true; }];
+                            for(var i in validateArray){
+                                var retVal= validateArray[i]();
+                                if(!retVal){
+                                    //alert('form is invalid');
+                                    console.log(validateArray[i])
+                                    return false;
+                                }
+                            }
+                            return true;
+                        }
+                        </script></div>
+                        
+<input type="hidden" name="outside_form" value="true">
+<div class="control-group"><div class="controls"><input class="btn btn-primary" value="Submit" type="submit"></div></div>
+<input type="hidden" name="message" value="Thanks for your application"><input type="hidden" name="redirect_to" value="http://mantra-homepage.herokuapp.com/"></form></div>

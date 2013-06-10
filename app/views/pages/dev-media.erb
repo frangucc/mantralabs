@@ -69,46 +69,46 @@
 
     </div>
 </div>
-<div id="" class="reveal-modal">
+<script type="text/template" id="" >
     
-    <iframe width="560" height="315" src="http://www.youtube.com/embed/7pEJX4sHJuk?wmode=opaque&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/7pEJX4sHJuk?wmode=opaque&enablejsapi=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
     <a class="close-reveal-modal">&#215;</a>
-</div>
-<div id="devmedia2" class="reveal-modal">
-    <iframe width="560" height="315" src="http://www.youtube.com/embed/gU-_R5UKK00?wmode=opaque&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+</script>
+<script type="text/template"  id="devmedia2" >
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/gU-_R5UKK00?wmode=opaque&enablejsapi=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
     <a class="close-reveal-modal">&#215;</a>
-</div>
-<div id="devmedia3" class="reveal-modal">
- <iframe width="560" height="315" src="http://www.youtube.com/embed/Dd9IIOmJb4k?wmode=opaque&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+</script>
+<script type="text/template"  id="devmedia3" >
+ <iframe width="560" height="315" src="http://www.youtube.com/embed/Dd9IIOmJb4k?wmode=opaque&enablejsapi=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
     <a class="close-reveal-modal">&#215;</a>
-</div>
-<div id="devmedia4" class="reveal-modal">
+</script>
+<script type="text/template"  id="devmedia4" >
  
 
     <a class="close-reveal-modal">&#215;</a>
-</div>
-<div id="devmedia5" class="reveal-modal">
-     <iframe width="560" height="315" src="http://www.youtube.com/embed/KF9dcgslES8?wmode=opaque&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+</script>
+<script type="text/template"  id="devmedia5" >
+     <iframe width="560" height="315" src="http://www.youtube.com/embed/KF9dcgslES8?wmode=opaque&enablejsapi=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
     
     <a class="close-reveal-modal">&#215;</a>
-</div>
-<div id="devmedia6" class="reveal-modal">
-       <iframe width="560" height="315" src="http://www.youtube.com/embed/7i74X3je3KY?wmode=opaque&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+</script>
+<script type="text/template"  id="devmedia6" >
+       <iframe width="560" height="315" src="http://www.youtube.com/embed/7i74X3je3KY?wmode=opaque&enablejsapi=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
     <a class="close-reveal-modal">&#215;</a>
-</div>
-<div id="devmedia7" class="reveal-modal">
-    <iframe width="560" height="315" src="http://www.youtube.com/embed/7pEJX4sHJuk?wmode=opaque&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+</script>
+<script type="text/template"  id="devmedia7" >
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/7pEJX4sHJuk?wmode=opaque&enablejsapi=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
     <a class="close-reveal-modal">&#215;</a>
-</div>
-<div id="devmedia8" class="reveal-modal">
+</script>
+<script type="text/template"  id="devmedia8" >
 
 
     <a class="close-reveal-modal">&#215;</a>
-</div>
-<div id="devmedia9" class="reveal-modal">
-    <iframe width="560" height="315" src="http://www.youtube.com/embed/opy9QemC-dc?wmode=opaque&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+</script>
+<script type="text/template"  id="devmedia9" >
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/opy9QemC-dc?wmode=opaque&enablejsapi=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
     <a class="close-reveal-modal">&#215;</a>
-</div>
+</script>
 
 
 <style>
@@ -150,6 +150,15 @@
 	
 	});
     
+	$('[data-reveal-id]').click(function(){
+		var html = $('<div><div class="reveal-modal" ></div><div class="reveal-modal-bg" style="display: block; cursor: pointer; "></div></div>')
+		html.find('.reveal-modal').html($('#'+$(this).attr('data-reveal-id')).html()).css({'visibility' : 'visible'});
+		html.find('.close-reveal-modal,.reveal-modal-bg').click(function(){
+			html.remove()
+		})
+		$('body').append(html)
+	})
+
 	//keyboard support (left/right arrow nav)
 	$(document).keyup(function(e){			
 

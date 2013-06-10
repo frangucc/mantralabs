@@ -10,7 +10,7 @@
 //= require video
 //= require jquery.fitvids
 //= require jquery.mCustomScrollbar.min
-//= require jquery.reveal
+
 //= require jquery.hoverIntent.minified
 //= require bigvideo
 

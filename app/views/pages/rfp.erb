@@ -1,3 +1,22 @@
+
+<div class="row fullwidth ux-container small-no-limit-top">
+    <div class="large-6 size-animation columns strethdown ovfh small-height-auto  ovfa ux-left">
+    <!-- div class="ux-next h3">NEXT</div -->
+    <div class="s-limit-top">
+        <div class="backarrow vmiddle"></div>
+        <div class="h4 inline vmiddle go-back oxygen"><a href="/">GO BACK</a></div>
+    </div>
+
+    <!----------------------------------!-->
+
+    <div class="ux-slide-left active ">
+        <div class="h1 gray-mark inline s-padding m-limit-top">Request for Proposal</div>
+        <div class="h2 georgia s-limit-top">Mantra differentiates from Chicago agencies in many ways, one of them, price.</div>
+        <p class="oxygen m-limit m-limit-top h4">
+            Give us a shout and we'll reach out within 24 hours to learn more about your project. Or call us at: 312-806-7979.
+        </p>
+
+
 <div><form method="POST" onsubmit=" return ProcessSmithValid() " id="processSmithForm" action="https://app.process-smith.com/interactions/start/186?client=mantra_web&display=public" enctype="multipart/form-data" class="form-horizontal">
 <div class="control-group">
 <label class="control-label">First name</label>
@@ -46,6 +65,85 @@
 <input type="hidden" name="outside_form" value="true">
 <div class="control-group"><div class="controls"><input class="btn btn-primary" value="Submit" type="submit"></div></div>
 <input type="hidden" name="message" value="Thank your for your information"><input type="hidden" name="redirect_to" value="http://mantra-homepage.herokuapp.com/"></form></div>
+
+
+    </div>
+
+
+    </div>
+
+
+
+    <div class="large-6 size-animation columns ux-right strethdown ovfh no-padding-left left">
+
+    <div class="ux-slide-right active ux-slider">
+        <div class="img-slider-nav">
+        <div class="circle small white-bg inline"></div>
+        <div class="circle small white-bg inline"></div>    
+        </div>
+        <div class="absfill ux-slider-single" style="background-image: url(assets/ux/web1.jpg);"></div>
+        <div class="absfill ux-slider-single" style="background-image: url(assets/ux/web2.jpg);"></div>
+    </div>
+    
+
+
+</div>
+<style>
+    #rightbar {display: none !important;}
+</style>
+<script>
+    $(document).ready(function(){
+    $('.ux-slide-left.active').cascade();   
+    $('.ux-next').click(function(){ 
+    
+        var left = $('.ux-slide-left.active');
+        var right = $('.ux-slide-right.active');
+
+        if ( right.nextOrFirst().hasClass('slide-with-video') ) {
+        $('.ux-left').removeClass('large-6').addClass('large-4');
+        $('.ux-right').removeClass('large-6').addClass('large-8');
+    
+        } else {
+        $('.ux-left').removeClass('large-4').addClass('large-6');
+        $('.ux-right').removeClass('large-8').addClass('large-6');    
+        }
+    
+        $('.ux-slide-left.last').removeClass('last')
+        left.addClass('last').removeClass('active').nextOrFirst('.ux-slide-left').addClass('active');
+    
+    
+        $('.ux-slide-right.last').removeClass('last')
+        right.addClass('last').removeClass('active').nextOrFirst('.ux-slide-right').addClass('active');
+    
+    
+        $('.ux-slide-left.active').cascade();   
+        $('.ux-slide-right.active').delay(200).fadeSlideIn();
+    
+        //$(window).resize();
+        $('.ux-vid').vCenter();
+    
+    
+    
+    
+    });
+    
+    //keyboard support (left/right arrow nav)
+    $(document).keyup(function(e){          
+
+        if(e.keyCode == 39 || e.keyCode == 40) {
+        $('.ux-next').trigger('click');
+        }
+    });  
+    
+    
+    $('.ux-slider').sliding('circle','ux-slider-single');
+    
+    })    
+</script>
+
+
+
+
 
 
 

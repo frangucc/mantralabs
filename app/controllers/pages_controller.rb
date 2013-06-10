@@ -60,6 +60,12 @@ class PagesController < ApplicationController
    def work_agentrun
    end
 
+   def work_monthlys
+
+   
+   end
+
+
    def work_tagkast
    end
 

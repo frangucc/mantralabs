@@ -381,6 +381,10 @@ em {
      height: auto;
  }
 
+.work-single-info p { padding:0 0 60px 0;}
+
+
+
  #topbar nav ul li img {
      margin-left: 5px;
      margin-bottom: 3px;
@@ -563,6 +567,11 @@ h4,.h5 {
 }
 .work-single-info h1 {}
 
+.spacer {
+    padding:60px 0 40px 0;
+
+}
+
  .work-single-header {
      background: none !important;
      height: 440px;
@@ -654,7 +663,8 @@ h4,.h5 {
 }
 .divider {
     border-bottom:1px solid #d6d6d6;
-    padding-bottom:40px;
+    padding-bottom:60px;
+    padding-top:30px;
 
 }
 .inline-inline {

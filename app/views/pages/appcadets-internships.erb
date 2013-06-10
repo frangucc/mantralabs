@@ -9,11 +9,105 @@
 	<!----------------------------------!-->
 
 	<div class="ux-slide-left active ">
+
 	    <div class="h1 gray-mark inline s-padding m-limit-top">Intern with us</div>
-	    <div class="h2 georgia s-limit-top">The coolest internship you've ever done</div>
+	    <div class="h2 georgia s-limit-top">Expand your knowledge by working with a highly experienced software team.</div>
 	    <p class="oxygen m-limit m-limit-top h4">
-	    	Ed, internship form goes here. Check your email.
+	    	Apply for a Mantra Internship:
 	    </p>
+
+	    <div><form method="POST" onsubmit=" return ProcessSmithValid() " id="processSmithForm" action="https://app.process-smith.com/interactions/start/191?client=mantra_web&display=public" enctype="multipart/form-data" class="form-horizontal">
+
+
+	    	
+<div class="control-group">
+<label class="control-label">First name*</label>
+<div class="controls">
+<input value="" type="text" name="first_name(0-Form)">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Last name*</label>
+<div class="controls">
+<input value="" type="text" name="last_name(0-Form)">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Email*</label>
+<div class="controls">
+<input value="" type="text" name="email(0-Form)">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Interest</label>
+<div class="controls">
+<select name="interest(0-Form)"><option value="Back-end">Back-end</option><option value="Backend">Backend</option></select>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Why are you interested in joining the program</label>
+<div class="controls">
+<textarea rows="2" cols="30" name="interest(0-Form)"></textarea>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Resume</label>
+<div class="controls">
+No file uploaded<input type="file" name="resume(0-Form)"> 
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Where are you located</label>
+<div class="controls">
+<input value="" type="text" name="location(0-Form)">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">What do you want to do after Appcadets</label>
+<div class="controls">
+<textarea rows="2" cols="30" name="after(0-Form)"></textarea>
+</div>
+</div>
+<div id="psScriptHolder"><script type='text/javascript'>
+                        var ProcessSmithValid = function(){
+                            var validateArray=[function(){ 
+                            var value = document.getElementsByName("first_name(0-Form)")[0].value;
+                            var valid = value.length>0
+                            if(!valid){
+                                alert("You are missing a required field");
+                            }
+                            return valid;
+                        },function(){ 
+                            var value = document.getElementsByName("last_name(0-Form)")[0].value;
+                            var valid = value.length>0
+                            if(!valid){
+                                alert("You are missing a required field");
+                            }
+                            return valid;
+                        },function(){ 
+                            var value = document.getElementsByName("email(0-Form)")[0].value; 
+                            var re=/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; 
+                            var valid = re.test(value)
+                            if(!valid){
+                                alert("You have an invalid email address");
+                            }
+                            return valid;
+                        },function(){ return true; },function(){ return true; },function(){ return true; },function(){ return true; },function(){ return true; }];
+                            for(var i in validateArray){
+                                var retVal= validateArray[i]();
+                                if(!retVal){
+                                    //alert('form is invalid');
+                                    console.log(validateArray[i])
+                                    return false;
+                                }
+                            }
+                            return true;
+                        }
+                        </script></div>
+                        
+<input type="hidden" name="outside_form" value="true">
+<div class="control-group"><div class="controls"><input class="btn btn-primary" value="Submit" type="submit"></div></div>
+<input type="hidden" name="message" value="You have applied to be in AppCadet"><input type="hidden" name="redirect_to" value="http://mantra-homepage.herokuapp.com"></form></div>
 
 	</div>
 
@@ -28,7 +122,7 @@
 	<div class="ux-slide-right active ux-slider">
 	    <div class="img-slider-nav">
 	    </div>
-	    <div class="absfill ux-slider-single" style="background-image: url(assets/ux/culture.jpg);"></div>
+	    <div class="absfill ux-slider-single" style="background-image: url(assets/ux/hacker3.jpg);"></div>
 	</div>
 
 
@@ -38,55 +132,6 @@
 <style>
     #rightbar {display: none !important;}
 </style>
-<script>
-    $(document).ready(function(){
-	$('.ux-slide-left.active').cascade();	
-	$('.ux-next').click(function(){	
-	
-	    var left = $('.ux-slide-left.active');
-	    var right = $('.ux-slide-right.active');
-
-	    if ( right.nextOrFirst().hasClass('slide-with-video') ) {
-		$('.ux-left').removeClass('large-6').addClass('large-4');
-		$('.ux-right').removeClass('large-6').addClass('large-8');
-    
-	    } else {
-		$('.ux-left').removeClass('large-4').addClass('large-6');
-		$('.ux-right').removeClass('large-8').addClass('large-6');    
-	    }
-	
-	    $('.ux-slide-left.last').removeClass('last')
-	    left.addClass('last').removeClass('active').nextOrFirst('.ux-slide-left').addClass('active');
-	
-	
-	    $('.ux-slide-right.last').removeClass('last')
-	    right.addClass('last').removeClass('active').nextOrFirst('.ux-slide-right').addClass('active');
-	
-	
-	    $('.ux-slide-left.active').cascade();	
-	    $('.ux-slide-right.active').delay(200).fadeSlideIn();
-	
-	    //$(window).resize();
-	    $('.ux-vid').vCenter();
-	
-	
-	
-	
-	});
-    
-	//keyboard support (left/right arrow nav)
-	$(document).keyup(function(e){			
-
-	    if(e.keyCode == 39 || e.keyCode == 40) {
-		$('.ux-next').trigger('click');
-	    }
-	});  
-	
-	
-	$('.ux-slider').sliding('circle','ux-slider-single');
-    
-    })    
-</script>
 
 
 

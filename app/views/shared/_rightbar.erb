@@ -1,11 +1,14 @@
-<div id="rightbar" class="small-static">
+
+<% unless controller.action_name.start_with?("work_") %>
+<div id="rightbar" class="small-static right_bar">
     
     <nav>
 	<ul>	    
 	    <a href="/team"><li class="blue-noise-bg-small inline cboth position-animation">TEAM</li></a>
-	    <li class="blue-noise-bg-small inline cboth position-animation">REFERENCES</li>
+	    <!-- li class="blue-noise-bg-small inline cboth position-animation">REFERENCES</li -->
 	    <a href="/contact"><li class="blue-noise-bg-small inline cboth position-animation">CONTACT US</li></a>    
 	</ul>
     </nav>
     
 </div>
+<% end %>
